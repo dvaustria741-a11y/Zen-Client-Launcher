@@ -55,37 +55,20 @@ class OverlayService : Service() {
 
     private fun addBubble() {
         val size = (56 * resources.displayMetrics.density).toInt()
-
         bubbleView = ImageView(this).apply {
             setImageResource(R.mipmap.ic_launcher_round)
             scaleType = ImageView.ScaleType.FIT_CENTER
             setPadding(4, 4, 4, 4)
         }
-
         bubbleParams = WindowManager.LayoutParams(size, size, overlayType(),
             WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE, PixelFormat.TRANSLUCENT).apply {
-            gravity = Gravity.TOP or Gravity.START
-            x = 0; y = 200
+            gravity = Gravity.TOP or Gravity.START; x = 0; y = 200
         }
-
-        var initialX = 0; var initialY = 0
-        var touchX = 0f; var touchY = 0f
-        var dragged = false
-
+        var initialX = 0; var initialY = 0; var touchX = 0f; var touchY = 0f; var dragged = false
         bubbleView.setOnTouchListener { _, event ->
             when (event.action) {
-                MotionEvent.ACTION_DOWN -> {
-                    initialX = bubbleParams.x; initialY = bubbleParams.y
-                    touchX = event.rawX; touchY = event.rawY
-                    dragged = false; true
-                }
-                MotionEvent.ACTION_MOVE -> {
-                    val dx = (event.rawX - touchX).toInt()
-                    val dy = (event.rawY - touchY).toInt()
-                    if (abs(dx) > 8 || abs(dy) > 8) dragged = true
-                    bubbleParams.x = initialX + dx; bubbleParams.y = initialY + dy
-                    windowManager.updateViewLayout(bubbleView, bubbleParams); true
-                }
+                MotionEvent.ACTION_DOWN -> { initialX = bubbleParams.x; initialY = bubbleParams.y; touchX = event.rawX; touchY = event.rawY; dragged = false; true }
+                MotionEvent.ACTION_MOVE -> { val dx = (event.rawX - touchX).toInt(); val dy = (event.rawY - touchY).toInt(); if (abs(dx) > 8 || abs(dy) > 8) dragged = true; bubbleParams.x = initialX + dx; bubbleParams.y = initialY + dy; windowManager.updateViewLayout(bubbleView, bubbleParams); true }
                 MotionEvent.ACTION_UP -> { if (!dragged) toggleGui(); true }
                 else -> false
             }
@@ -95,60 +78,30 @@ class OverlayService : Service() {
 
     private fun toggleGui() {
         guiView?.let { runCatching { windowManager.removeView(it) }; guiView = null; return }
-
         val panel = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
             setBackgroundColor(Color.parseColor("#E6121212"))
             setPadding(32, 32, 32, 32)
         }
-
-        panel.addView(TextView(this).apply {
-            text = "ZenOverlay"
-            setTextColor(Color.WHITE)
-            textSize = 16f
-            setPadding(0, 0, 0, 16)
-        })
-
+        panel.addView(TextView(this).apply { text = "Zen Client"; setTextColor(Color.WHITE); textSize = 16f; setPadding(0, 0, 0, 16) })
         val fpsRow = LinearLayout(this).apply { orientation = LinearLayout.HORIZONTAL }
-        fpsRow.addView(TextView(this).apply {
-            text = "FPS Counter"
-            setTextColor(Color.WHITE)
-            layoutParams = LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f)
-        })
-        fpsRow.addView(Switch(this).apply {
-            setOnCheckedChangeListener { _, on -> if (on) startFpsCounter() else stopFpsCounter() }
-        })
+        fpsRow.addView(TextView(this).apply { text = "FPS Counter"; setTextColor(Color.WHITE); layoutParams = LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f) })
+        fpsRow.addView(Switch(this).apply { setOnCheckedChangeListener { _, on -> if (on) startFpsCounter() else stopFpsCounter() } })
         panel.addView(fpsRow)
-
-        val params = WindowManager.LayoutParams(
-            WindowManager.LayoutParams.WRAP_CONTENT,
-            WindowManager.LayoutParams.WRAP_CONTENT,
-            overlayType(), WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE, PixelFormat.TRANSLUCENT
-        ).apply { gravity = Gravity.TOP or Gravity.START; x = bubbleParams.x + 120; y = bubbleParams.y }
-
-        windowManager.addView(panel, params)
-        guiView = panel
+        val params = WindowManager.LayoutParams(WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT, overlayType(), WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE, PixelFormat.TRANSLUCENT).apply { gravity = Gravity.TOP or Gravity.START; x = bubbleParams.x + 120; y = bubbleParams.y }
+        windowManager.addView(panel, params); guiView = panel
     }
 
     private fun startFpsCounter() {
         if (fpsView != null) return
-        fpsView = TextView(this).apply {
-            setTextColor(Color.parseColor("#FF2A3C"))
-            setBackgroundColor(Color.parseColor("#CC121212"))
-            textSize = 14f; setPadding(12, 6, 12, 6); text = "FPS: --"
-        }
-        val params = WindowManager.LayoutParams(
-            WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT,
-            overlayType(), WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE, PixelFormat.TRANSLUCENT
-        ).apply { gravity = Gravity.TOP or Gravity.END; x = 24; y = 100 }
+        fpsView = TextView(this).apply { setTextColor(Color.parseColor("#FF2A3C")); setBackgroundColor(Color.parseColor("#CC121212")); textSize = 14f; setPadding(12, 6, 12, 6); text = "FPS: --" }
+        val params = WindowManager.LayoutParams(WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT, overlayType(), WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE, PixelFormat.TRANSLUCENT).apply { gravity = Gravity.TOP or Gravity.END; x = 24; y = 100 }
         windowManager.addView(fpsView, params)
-
         fpsCallback = object : Choreographer.FrameCallback {
             override fun doFrame(frameTimeNanos: Long) {
                 frameTimestamps.addLast(frameTimeNanos)
                 val cutoff = frameTimeNanos - 1_000_000_000L
-                while (frameTimestamps.isNotEmpty() && frameTimestamps.first() < cutoff)
-                    frameTimestamps.removeFirst()
+                while (frameTimestamps.isNotEmpty() && frameTimestamps.first() < cutoff) frameTimestamps.removeFirst()
                 fpsView?.text = "FPS: ${frameTimestamps.size}"
                 Choreographer.getInstance().postFrameCallback(this)
             }
@@ -163,16 +116,13 @@ class OverlayService : Service() {
     }
 
     private fun buildNotification(): Notification {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
             (getSystemService(NOTIFICATION_SERVICE) as NotificationManager)
-                .createNotificationChannel(NotificationChannel(CHANNEL_ID, "ZenOverlay",
-                    NotificationManager.IMPORTANCE_LOW))
-        }
+                .createNotificationChannel(NotificationChannel(CHANNEL_ID, "Zen Client", NotificationManager.IMPORTANCE_LOW))
         return NotificationCompat.Builder(this, CHANNEL_ID)
-            .setContentTitle("ZenOverlay running")
+            .setContentTitle("Zen Client running")
             .setContentText("Tap the bubble to open the menu")
-            .setSmallIcon(R.mipmap.ic_launcher)
-            .setOngoing(true).build()
+            .setSmallIcon(R.mipmap.ic_launcher).setOngoing(true).build()
     }
 
     companion object {
