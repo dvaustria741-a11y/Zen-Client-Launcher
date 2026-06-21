@@ -57,6 +57,40 @@ class ZenNativeActivity : NativeActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        // Resolve Bedrock's native lib dir FIRST and System.load() it before
+        // super.onCreate(). super.onCreate() is what triggers the framework's
+        // internal dlopen("libzenclient.so"), which calls our hijacked
+        // ANativeActivity_onCreate (zen_native_activity.cpp). That function
+        // uses dlsym(RTLD_NEXT, "ANativeActivity_onCreate") to find Bedrock's
+        // real entry point and hand off to it — but RTLD_NEXT only sees
+        // libraries already mapped into the process at that moment. If
+        // libminecraftpe.so isn't loaded yet, the lookup fails silently,
+        // Bedrock's entry point never runs, and nothing ever renders —
+        // which is exactly the black screen we were hitting. Loading it here,
+        // before configureWindow()/super.onCreate(), guarantees it's mapped
+        // in time. (Also fixes ZenSymbolResolver's later RTLD_NOLOAD lookup
+        // in nativeSetBedrockLibDir, which has the same "must already be
+        // loaded" requirement.)
+        val bedrockNativeDir = intent.getStringExtra("bedrock_native_dir") ?: run {
+            try {
+                packageManager
+                    .getApplicationInfo("com.mojang.minecraftpe", 0)
+                    .nativeLibraryDir
+            } catch (e: Exception) {
+                Log.e(TAG, "Could not resolve Bedrock native dir in ZenNativeActivity", e)
+                null
+            }
+        }
+
+        bedrockNativeDir?.let { dir ->
+            try {
+                System.load("$dir/libminecraftpe.so")
+                Log.d(TAG, "Loaded libminecraftpe.so from $dir")
+            } catch (e: UnsatisfiedLinkError) {
+                Log.e(TAG, "Failed to load libminecraftpe.so from $dir — Bedrock hijack will not work", e)
+            }
+        } ?: Log.e(TAG, "No Bedrock native dir available — cannot load libminecraftpe.so")
+
         // Flags/orientation don't touch the DecorView, so they're safe to set
         // before super.onCreate().
         configureWindow()
@@ -70,22 +104,8 @@ class ZenNativeActivity : NativeActivity() {
 
         applyImmersiveMode()
 
-        // Pass the Bedrock native lib directory to our native layer.
-        // The native side uses this to dlopen libminecraftpe.so for symbol
-        // resolution if needed (see zen_symbol_resolver.cpp).
-        val bedrockNativeDir = intent.getStringExtra("bedrock_native_dir") ?: run {
-            // Fallback: re-resolve from PackageManager in the rare case the
-            // intent extra was stripped (e.g., process restart).
-            try {
-                packageManager
-                    .getApplicationInfo("com.mojang.minecraftpe", 0)
-                    .nativeLibraryDir
-            } catch (e: Exception) {
-                Log.e(TAG, "Could not resolve Bedrock native dir in ZenNativeActivity", e)
-                null
-            }
-        }
-
+        // Pass the Bedrock native lib directory to our native layer so
+        // ZenSymbolResolver can RTLD_NOLOAD it (it's already mapped above).
         bedrockNativeDir?.let {
             Log.d(TAG, "Passing Bedrock native dir to native layer: $it")
             nativeSetBedrockLibDir(it)
