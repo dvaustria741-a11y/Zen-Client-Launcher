@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface_dark">
+
+    <LinearLayout
+        android:layout_width="420dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@drawable/bg_card_dark"
+        android:padding="28dp">
+
+        <FrameLayout
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="@drawable/bg_crash_icon_circle"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="!"
+                android:textColor="@color/brand_red"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvCrashTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zen Client Crashed"
+            android:textColor="@color/text_primary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oops... Looks like Zen Client crashed :("
+            android:textColor="@color/text_secondary"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't worry, your settings are safe."
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:layout_marginBottom="20dp" />
+
+        <Button
+            android:id="@+id/btnOpenCrashLogs"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Open Crash Logs"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:background="@drawable/bg_button_primary"
+            android:stateListAnimator="@null"
+            android:layout_marginBottom="12dp" />
+
+        <Button
+            android:id="@+id/btnCloseCrash"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Close"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:background="@drawable/bg_button_secondary"
+            android:stateListAnimator="@null" />
+
+    </LinearLayout>
+
+</FrameLayout>

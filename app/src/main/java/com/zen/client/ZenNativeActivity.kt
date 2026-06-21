@@ -1,4 +1,4 @@
-package com.zenclient.launcher
+package com.zen.client
 
 import android.app.NativeActivity
 import android.content.pm.ActivityInfo

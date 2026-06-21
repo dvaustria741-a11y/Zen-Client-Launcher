@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@drawable/bg_card_dark"
+        android:padding="20dp">
+
+        <FrameLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_crash_icon_circle"
+            android:layout_marginBottom="12dp">
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="15dp"
+                android:layout_gravity="top|start"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_overlay_icon_back" />
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="15dp"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="9dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/bg_overlay_icon_front" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvPermissionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enable Overlay Access"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvPermissionMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zen Client needs permission to draw over Minecraft so the bubble and ClickGUI can appear in-game."
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnGrantPermission"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="Grant Permission"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:background="@drawable/bg_button_primary"
+            android:stateListAnimator="@null"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnNotNow"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="Not Now"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:background="@drawable/bg_button_secondary"
+            android:stateListAnimator="@null" />
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,98 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#0D0D0D">
+    android:layout_height="match_parent">
 
-    <!-- Logo / title -->
-    <TextView
-        android:id="@+id/titleText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ZEN CLIENT"
-        android:textSize="32sp"
-        android:textColor="#FFFFFF"
-        android:letterSpacing="0.2"
-        android:fontFamily="sans-serif-medium"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="80dp" />
+    <ImageView
+        android:id="@+id/bgImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_launcher"
+        android:scaleType="centerCrop"
+        android:contentDescription="@null" />
 
-    <TextView
-        android:id="@+id/subtitleText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="LAUNCHER"
-        android:textSize="13sp"
-        android:textColor="#888888"
-        android:letterSpacing="0.4"
-        app:layout_constraintTop_toBottomOf="@id/titleText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="4dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/surface_scrim" />
 
-    <!-- Status / loading message -->
-    <TextView
-        android:id="@+id/statusText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#AAAAAA"
-        android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@id/subtitleText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="48dp" />
-
-    <!-- Launch button -->
-    <Button
-        android:id="@+id/launchButton"
-        android:layout_width="200dp"
-        android:layout_height="48dp"
-        android:text="LAUNCH"
-        android:textColor="#FFFFFF"
-        android:backgroundTint="#1A1A1A"
-        android:strokeColor="#333333"
-        android:letterSpacing="0.15"
-        app:layout_constraintTop_toBottomOf="@id/statusText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp" />
-
-    <!-- Error container (hidden until an error occurs) -->
     <LinearLayout
-        android:id="@+id/errorContainer"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:visibility="gone"
-        android:padding="24dp"
-        android:background="#1A0000"
-        app:layout_constraintTop_toBottomOf="@id/launchButton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp"
-        android:layout_marginHorizontal="24dp">
+        android:gravity="center"
+        android:padding="32dp">
 
         <TextView
-            android:id="@+id/errorText"
-            android:layout_width="match_parent"
+            android:id="@+id/tvGreeting"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#FF6B6B"
-            android:textSize="14sp"
-            android:lineSpacingMultiplier="1.5" />
+            android:text="Good Evening!"
+            android:textColor="@color/text_primary"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ready to play?"
+            android:textColor="@color/text_secondary"
+            android:textSize="16sp"
+            android:layout_marginBottom="48dp" />
 
         <Button
-            android:id="@+id/installButton"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="GET MINECRAFT ON PLAY STORE"
-            android:textColor="#FFFFFF"
-            android:backgroundTint="#1A2E1A"
-            android:layout_marginTop="16dp" />
+            android:id="@+id/btnLaunch"
+            android:layout_width="280dp"
+            android:layout_height="56dp"
+            android:text="Launch"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:background="@drawable/bg_button_primary"
+            android:stateListAnimator="@null"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnSettings"
+            android:layout_width="280dp"
+            android:layout_height="56dp"
+            android:text="Settings"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:background="@drawable/bg_button_secondary"
+            android:stateListAnimator="@null" />
 
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvVersionInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Minecraft 1.21 | ZenOverlay 1.0"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preparing launch"
+            android:textColor="@color/text_secondary"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</FrameLayout>
