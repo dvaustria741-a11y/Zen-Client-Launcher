@@ -18,7 +18,7 @@
 #define ZEN_VERSION "1.0.0"
 
 // JNI naming convention: Java_<packageName with _ for dots>_<className>_<methodName>
-// Package: com.zenclient.launcher, Class: ZenNativeActivity
+// Package: com.zen.client, Class: ZenNativeActivity
 
 extern "C" {
 
@@ -30,7 +30,7 @@ extern "C" {
  *   ZenNativeActivity.nativeSetBedrockLibDir(libDir)
  */
 JNIEXPORT void JNICALL
-Java_com_zenclient_launcher_ZenNativeActivity_nativeSetBedrockLibDir(
+Java_com_zen_client_ZenNativeActivity_nativeSetBedrockLibDir(
         JNIEnv* env,
         jclass  /* clazz */,
         jstring libDir) {
@@ -62,7 +62,7 @@ Java_com_zenclient_launcher_ZenNativeActivity_nativeSetBedrockLibDir(
  *   ZenNativeActivity.nativeGetVersion()
  */
 JNIEXPORT jstring JNICALL
-Java_com_zenclient_launcher_ZenNativeActivity_nativeGetVersion(
+Java_com_zen_client_ZenNativeActivity_nativeGetVersion(
         JNIEnv* env,
         jclass  /* clazz */) {
     return env->NewStringUTF(ZEN_VERSION);
