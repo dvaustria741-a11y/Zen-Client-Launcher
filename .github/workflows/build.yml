@@ -5,6 +5,9 @@ on:
     branches: ["main"]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -27,9 +30,29 @@ jobs:
           gradle-version: "8.7"
 
       - name: Build debug APK
-        run: gradle assembleDebug
+        id: build
+        run: |
+          set +e
+          gradle assembleDebug --stacktrace --info > build_log.txt 2>&1
+          echo "exit_code=$?" >> "$GITHUB_OUTPUT"
+          tail -n 200 build_log.txt
+          exit 0
+
+      - name: Commit build log
+        if: always()
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add build_log.txt
+          git commit -m "Add build log [skip ci]" || echo "nothing to commit"
+          git push
+
+      - name: Fail job if build actually failed
+        if: steps.build.outputs.exit_code != '0'
+        run: exit 1
 
       - name: Upload APK artifact
+        if: steps.build.outputs.exit_code == '0'
         uses: actions/upload-artifact@v4
         with:
           name: ZenOverlay-debug
