@@ -4,7 +4,6 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
-import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -29,17 +28,16 @@ class MainActivity : AppCompatActivity() {
 
         val mcInstalled = isPackageInstalled(MINECRAFT_PACKAGE)
         val mcVersion = if (mcInstalled) getMcVersion() else "Not installed"
-        tvVersionInfo.text = "$mcVersion | ZenOverlay 1.0"
+        tvVersionInfo.text = "$mcVersion | Zen Client 1.0"
 
         btnLaunch.setOnClickListener {
             when {
                 !Settings.canDrawOverlays(this) -> {
                     tvStatus.text = "Grant overlay permission first"
-                    requestOverlayPermission()
+                    startActivity(Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+                        Uri.parse("package:$packageName")))
                 }
-                !mcInstalled -> {
-                    Toast.makeText(this, "Minecraft Bedrock not installed", Toast.LENGTH_SHORT).show()
-                }
+                !mcInstalled -> Toast.makeText(this, "Minecraft Bedrock not installed", Toast.LENGTH_SHORT).show()
                 else -> {
                     tvStatus.text = "Launching..."
                     startForegroundService(Intent(this, OverlayService::class.java))
@@ -52,9 +50,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnSettings.setOnClickListener {
-            tvStatus.text = "Opening settings..."
-            startActivity(Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
-                Uri.parse("package:$packageName")))
+            startActivity(Intent(this, SettingsActivity::class.java))
         }
     }
 
@@ -66,10 +62,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun timeGreeting(): String {
-        val hour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY)
-        return when {
-            hour < 12 -> "Good Morning!"
-            hour < 17 -> "Good Afternoon!"
+        return when (Calendar.getInstance().get(Calendar.HOUR_OF_DAY)) {
+            in 0..11 -> "Good Morning!"
+            in 12..16 -> "Good Afternoon!"
             else -> "Good Evening!"
         }
     }
@@ -78,13 +73,7 @@ class MainActivity : AppCompatActivity() {
         packageManager.getPackageInfo(pkg, 0); true
     } catch (e: Exception) { false }
 
-    private fun getMcVersion(): String = try {
-        val info = packageManager.getPackageInfo(MINECRAFT_PACKAGE, 0)
-        "Minecraft ${info.versionName}"
+    private fun getMcVersion() = try {
+        "Minecraft ${packageManager.getPackageInfo(MINECRAFT_PACKAGE, 0).versionName}"
     } catch (e: Exception) { "Minecraft" }
-
-    private fun requestOverlayPermission() {
-        startActivity(Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
-            Uri.parse("package:$packageName")))
-    }
 }
