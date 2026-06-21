@@ -46,13 +46,18 @@ class ZenNativeActivity : NativeActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        // Apply window flags before super.onCreate() so they're in place
-        // before the native surface is created.
+        // Flags/orientation don't touch the DecorView, so they're safe to set
+        // before super.onCreate().
         configureWindow()
 
         // super.onCreate() triggers ANativeActivity_onCreate in our native lib,
-        // which installs all hooks before Bedrock's own entry point runs.
+        // which installs all hooks before Bedrock's own entry point runs. It
+        // also creates the DecorView, which applyImmersiveMode() needs — call
+        // it after super.onCreate(), not before, or window.insetsController
+        // resolves against a null DecorView and crashes.
         super.onCreate(savedInstanceState)
+
+        applyImmersiveMode()
 
         // Pass the Bedrock native lib directory to our native layer.
         // The native side uses this to dlopen libminecraftpe.so for symbol
@@ -95,8 +100,6 @@ class ZenNativeActivity : NativeActivity() {
 
         // Landscape — Bedrock only renders in landscape on Android
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE
-
-        applyImmersiveMode()
     }
 
     private fun applyImmersiveMode() {
