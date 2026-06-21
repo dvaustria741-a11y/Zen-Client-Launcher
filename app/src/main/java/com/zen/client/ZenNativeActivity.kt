@@ -3,10 +3,15 @@ package com.zen.client
 import android.app.NativeActivity
 import android.content.pm.ActivityInfo
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import android.view.WindowInsets
 import android.view.WindowInsetsController
 import android.view.WindowManager
+import java.io.BufferedReader
+import java.io.File
+import java.io.InputStreamReader
 
 /**
  * ZenNativeActivity
@@ -112,6 +117,31 @@ class ZenNativeActivity : NativeActivity() {
         }
 
         Log.i(TAG, "ZenNativeActivity started — native version: ${nativeGetVersion()}")
+
+        // DEBUG: dump this process's own logcat (Java + native LOGI/LOGE,
+        // since the hook .so logs under the same process/UID) to a plain
+        // file we can read without root, adb, or a PC. Apps are allowed to
+        // read logcat entries tagged with their own UID with no special
+        // permission — only reading OTHER apps'/system logs requires
+        // READ_LOGS. Delayed 4s so native init/hook-install logs land in the
+        // buffer before we dump it. Remove once the black screen is sorted.
+        Handler(Looper.getMainLooper()).postDelayed({ dumpLogcatToFile() }, 4000)
+    }
+
+    private fun dumpLogcatToFile() {
+        try {
+            val process = ProcessBuilder("logcat", "-d", "-v", "time")
+                .redirectErrorStream(true)
+                .start()
+            val output = BufferedReader(InputStreamReader(process.inputStream)).readText()
+            process.waitFor()
+
+            val outFile = File(getExternalFilesDir(null), "zen_debug.log")
+            outFile.writeText(output)
+            Log.i(TAG, "Wrote logcat dump to ${outFile.absolutePath}")
+        } catch (e: Exception) {
+            Log.e(TAG, "Failed to dump logcat to file", e)
+        }
     }
 
     override fun onWindowFocusChanged(hasFocus: Boolean) {
