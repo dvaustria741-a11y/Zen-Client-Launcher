@@ -88,12 +88,7 @@ class ZenNativeActivity : NativeActivity() {
         }
 
         bedrockNativeDir?.let { dir ->
-            try {
-                System.load("$dir/libminecraftpe.so")
-                Log.d(TAG, "Loaded libminecraftpe.so from $dir")
-            } catch (e: UnsatisfiedLinkError) {
-                Log.e(TAG, "Failed to load libminecraftpe.so from $dir — Bedrock hijack will not work", e)
-            }
+            loadBedrockNativeLibs(dir)
         } ?: Log.e(TAG, "No Bedrock native dir available — cannot load libminecraftpe.so")
 
         // Flags/orientation don't touch the DecorView, so they're safe to set
@@ -126,6 +121,60 @@ class ZenNativeActivity : NativeActivity() {
         // READ_LOGS. Delayed 4s so native init/hook-install logs land in the
         // buffer before we dump it. Remove once the black screen is sorted.
         Handler(Looper.getMainLooper()).postDelayed({ dumpLogcatToFile() }, 4000)
+    }
+
+    // Bedrock's lib dir besides libminecraftpe.so itself — these are Mojang's
+    // own bundled third-party SDKs (FMOD audio, PlayFab, Conscrypt, the MS
+    // HttpClient, media decoders). libminecraftpe.so's ELF NEEDED entries
+    // list these by bare soname, and the dynamic linker resolves that via
+    // a per-app namespace path search — which is restricted to *our* app's
+    // own lib dir, not Minecraft's. Loading each one explicitly by its
+    // absolute path here first means the linker finds a same-soname library
+    // already mapped when libminecraftpe.so asks for it, so it reuses that
+    // instead of needing to search any path at all.
+    private val bedrockDependencyLibs = listOf(
+        "libc++_shared.so",
+        "libconscrypt_jni.so",
+        "libHttpClient.Android.so",
+        "libfmod.so",
+        "libmaesdk.so",
+        "libMediaDecoders_Android.so",
+        "libPlayFabMultiplayer.so"
+    )
+
+    private fun loadBedrockNativeLibs(dir: String) {
+        // We don't know the exact inter-dependency order of these (e.g.
+        // libmaesdk might itself need libfmod), so retry in passes — a lib
+        // that fails in one pass may succeed once another lib loaded later
+        // in that same pass satisfies its own NEEDED entry.
+        var remaining = bedrockDependencyLibs.toMutableList()
+        var lastError: UnsatisfiedLinkError? = null
+
+        repeat(4) {
+            if (remaining.isEmpty()) return@repeat
+            val stillFailing = mutableListOf<String>()
+            for (lib in remaining) {
+                try {
+                    System.load("$dir/$lib")
+                    Log.d(TAG, "Loaded Bedrock dependency: $lib")
+                } catch (e: UnsatisfiedLinkError) {
+                    stillFailing.add(lib)
+                    lastError = e
+                }
+            }
+            remaining = stillFailing
+        }
+
+        if (remaining.isNotEmpty()) {
+            Log.e(TAG, "Could not load some Bedrock dependencies after retries: $remaining", lastError)
+        }
+
+        try {
+            System.load("$dir/libminecraftpe.so")
+            Log.d(TAG, "Loaded libminecraftpe.so from $dir")
+        } catch (e: UnsatisfiedLinkError) {
+            Log.e(TAG, "Failed to load libminecraftpe.so from $dir — Bedrock hijack will not work", e)
+        }
     }
 
     private fun dumpLogcatToFile() {
