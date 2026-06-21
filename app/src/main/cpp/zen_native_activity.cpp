@@ -23,6 +23,7 @@
 
 #include <android/native_activity.h>
 #include <android/log.h>
+#include <dlfcn.h>
 #include "zen_hook_installer.h"
 #include "zen_symbol_resolver.h"
 
