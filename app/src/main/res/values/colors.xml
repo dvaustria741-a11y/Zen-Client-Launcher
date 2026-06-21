@@ -9,4 +9,5 @@
     <color name="text_secondary">#CCFFffFF</color>
     <color name="card_dark">#FF1E1B1D</color>
     <color name="crash_icon_bg">#33FF2A3C</color>
+    <color name="button_press_overlay">#4DFFFFFF</color>
 </resources>
