@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.WindowInsets
 import android.view.WindowInsetsController
 import android.view.WindowManager
+import dalvik.system.PathClassLoader
 
 /**
  * ZenNativeActivity
@@ -85,6 +86,22 @@ class ZenNativeActivity : NativeActivity() {
         }
 
         bedrockNativeDir?.let { dir ->
+            // Bedrock's bundled native libs (libfmod.so, libconscrypt_jni.so,
+            // libPlayFabMultiplayer.so, etc.) do JNI FindClass lookups against
+            // Java glue classes (org.fmod.FMOD, PlayFab SDK classes, media
+            // decoder helpers...) that only exist inside Minecraft's own APK
+            // dex — not ours. Rather than chasing each one down individually
+            // (conscrypt was the first; FMOD is next), merge Minecraft's own
+            // APK into our classloader first so all of these resolve straight
+            // from Mojang's already-correct implementation.
+            try {
+                val minecraftApkPath = packageManager
+                    .getApplicationInfo("com.mojang.minecraftpe", 0)
+                    .sourceDir
+                mergeMinecraftClasspath(minecraftApkPath)
+            } catch (e: Exception) {
+                Log.e(TAG, "Could not resolve Minecraft APK path for classpath merge", e)
+            }
             loadBedrockNativeLibs(dir)
         } ?: Log.e(TAG, "No Bedrock native dir available — cannot load libminecraftpe.so")
 
@@ -139,6 +156,79 @@ class ZenNativeActivity : NativeActivity() {
         "libMediaDecoders_Android.so",
         "libPlayFabMultiplayer.so"
     )
+
+    // -----------------------------------------------------------------------
+    // Classpath merge — gives our own classloader access to every class
+    // bundled inside Minecraft's APK, so JNI FindClass calls made by Bedrock's
+    // native libs (org.fmod.FMOD, PlayFab SDK classes, media decoder helpers,
+    // etc.) succeed instead of throwing ClassNotFoundException.
+    //
+    // Reflectively reads our own PathClassLoader's DexPathList.dexElements,
+    // builds a second DexPathList over Minecraft's base.apk (via a throwaway
+    // PathClassLoader using our own loader as parent, so class identity for
+    // shared framework/Kotlin types stays consistent), and appends Minecraft's
+    // elements onto ours. Our own elements stay first in the array, so any
+    // class we already ship (e.g. our conscrypt-android dependency) still
+    // wins on a name clash — Minecraft's copy is purely a fallback for
+    // classes we don't have at all.
+    //
+    // This relies on non-SDK fields (pathList / dexElements) that aren't
+    // guaranteed across Android versions/OEMs. If it throws, we log and fall
+    // through — loadBedrockNativeLibs() still runs, it just may hit the same
+    // class of crash again for whichever lib needed the missing class.
+    // -----------------------------------------------------------------------
+    private fun mergeMinecraftClasspath(minecraftApkPath: String) {
+        try {
+            val appClassLoader = this.classLoader
+            val appPathList = getPathList(appClassLoader)
+            val appElements = getDexElements(appPathList)
+
+            val minecraftClassLoader = PathClassLoader(minecraftApkPath, appClassLoader)
+            val minecraftPathList = getPathList(minecraftClassLoader)
+            val minecraftElements = getDexElements(minecraftPathList)
+
+            val combined = java.lang.reflect.Array.newInstance(
+                appElements.javaClass.componentType, appElements.size + minecraftElements.size
+            )
+            System.arraycopy(appElements, 0, combined, 0, appElements.size)
+            System.arraycopy(minecraftElements, 0, combined, appElements.size, minecraftElements.size)
+
+            setDexElements(appPathList, combined)
+            Log.d(TAG, "Merged Minecraft's classpath in (${minecraftElements.size} dex elements) from $minecraftApkPath")
+        } catch (e: Throwable) {
+            Log.e(TAG, "Failed to merge Minecraft's classpath — Bedrock native callbacks needing Mojang's Java classes may still crash", e)
+        }
+    }
+
+    private fun getPathList(classLoader: ClassLoader): Any {
+        val field = findField(classLoader.javaClass, "pathList")
+        return field.get(classLoader)!!
+    }
+
+    private fun getDexElements(pathList: Any): Array<Any?> {
+        val field = findField(pathList.javaClass, "dexElements")
+        @Suppress("UNCHECKED_CAST")
+        return field.get(pathList) as Array<Any?>
+    }
+
+    private fun setDexElements(pathList: Any, elements: Any) {
+        val field = findField(pathList.javaClass, "dexElements")
+        field.set(pathList, elements)
+    }
+
+    private fun findField(start: Class<*>, name: String): java.lang.reflect.Field {
+        var current: Class<*>? = start
+        while (current != null) {
+            try {
+                val field = current.getDeclaredField(name)
+                field.isAccessible = true
+                return field
+            } catch (e: NoSuchFieldException) {
+                current = current.superclass
+            }
+        }
+        throw NoSuchFieldException(name)
+    }
 
     private fun loadBedrockNativeLibs(dir: String) {
         // We don't know the exact inter-dependency order of these (e.g.
