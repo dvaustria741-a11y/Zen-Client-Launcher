@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.zen.overlay"
+    namespace = "com.zen.client"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.zen.overlay"
+        applicationId = "com.zen.client"
         minSdk = 26
         targetSdk = 34
         versionCode = 1
