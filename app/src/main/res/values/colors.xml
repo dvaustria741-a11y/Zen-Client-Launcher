@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brand_red">#FFFF2A3C</color>
+    <color name="brand_red_dark">#FFC13132</color>
+    <color name="surface_dark">#FF121212</color>
+    <color name="surface_scrim">#99000000</color>
+    <color name="btn_secondary_bg">#99463A3D</color>
+    <color name="text_primary">#FFFFFFFF</color>
+    <color name="text_secondary">#CCFFffFF</color>
+</resources>
