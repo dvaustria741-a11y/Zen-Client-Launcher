@@ -129,7 +129,6 @@ class SettingsActivity : AppCompatActivity() {
         addView(TextView(this@SettingsActivity).apply {
             text = title
             setTextColor(Color.WHITE)
-            textSize = 20sp
             textSize = 20f
             setTypeface(null, android.graphics.Typeface.BOLD)
             setPadding(0, 0, 0, dp(6))
