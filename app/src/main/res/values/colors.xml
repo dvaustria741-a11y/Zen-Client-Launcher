@@ -7,4 +7,6 @@
     <color name="btn_secondary_bg">#99463A3D</color>
     <color name="text_primary">#FFFFFFFF</color>
     <color name="text_secondary">#CCFFffFF</color>
+    <color name="card_dark">#FF1E1B1D</color>
+    <color name="crash_icon_bg">#33FF2A3C</color>
 </resources>
