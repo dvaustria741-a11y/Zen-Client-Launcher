@@ -5,8 +5,8 @@ Removing 0 daemon stop events from registry
 Starting a Gradle Daemon (subsequent builds will be faster)
 Starting process 'Gradle build daemon'. Working directory: /home/runner/.gradle/daemon/8.7 Command: /usr/lib/jvm/temurin-17-jdk-amd64/bin/java --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED --add-opens=java.base/java.nio.charset=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED -Xmx2048m -Dfile.encoding=UTF-8 -Duser.country -Duser.language=en -Duser.variant -cp /home/runner/work/_temp/.gradle-actions/gradle-installations/installs/gradle-8.7/lib/gradle-launcher-8.7.jar -javaagent:/home/runner/work/_temp/.gradle-actions/gradle-installations/installs/gradle-8.7/lib/agents/gradle-instrumentation-agent-8.7.jar org.gradle.launcher.daemon.bootstrap.GradleDaemon 8.7
 Successfully started process 'Gradle build daemon'
-An attempt to start the daemon took 0.935 secs.
-The client will now receive all logging from the daemon (pid: 2648). The daemon log file: /home/runner/.gradle/daemon/8.7/daemon-2648.out.log
+An attempt to start the daemon took 1.12 secs.
+The client will now receive all logging from the daemon (pid: 2724). The daemon log file: /home/runner/.gradle/daemon/8.7/daemon-2724.out.log
 Starting build in new daemon [memory: 2 GiB]
 Closing daemon's stdin at end of input.
 The daemon will no longer process any standard input.
@@ -183,64 +183,64 @@ Resolve mutations for :app:preBuild (Thread[Execution worker,5,main]) started.
 
 > Task :app:preBuild UP-TO-DATE
 Skipping task ':app:preBuild' as it has no actions.
-Resolve mutations for :app:preDebugBuild (Thread[included builds,5,main]) started.
-:app:preDebugBuild (Thread[included builds,5,main]) started.
+Resolve mutations for :app:preDebugBuild (Thread[Execution worker,5,main]) started.
+:app:preDebugBuild (Thread[Execution worker,5,main]) started.
 
 > Task :app:preDebugBuild UP-TO-DATE
 Skipping task ':app:preDebugBuild' as it has no actions.
-Resolve mutations for :app:mergeDebugNativeDebugMetadata (Thread[included builds,5,main]) started.
+Resolve mutations for :app:mergeDebugNativeDebugMetadata (Thread[Execution worker,5,main]) started.
 :app:mergeDebugNativeDebugMetadata (Thread[Execution worker,5,main]) started.
 
 > Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
 Skipping task ':app:mergeDebugNativeDebugMetadata' as it has no source files and no previous output files.
-Resolve mutations for :app:checkKotlinGradlePluginConfigurationErrors (Thread[included builds,5,main]) started.
-:app:checkKotlinGradlePluginConfigurationErrors (Thread[included builds,5,main]) started.
+Resolve mutations for :app:checkKotlinGradlePluginConfigurationErrors (Thread[Execution worker,5,main]) started.
+:app:checkKotlinGradlePluginConfigurationErrors (Thread[Execution worker,5,main]) started.
 
 > Task :app:checkKotlinGradlePluginConfigurationErrors
 Caching disabled for task ':app:checkKotlinGradlePluginConfigurationErrors' because:
   Build cache is disabled
 Task ':app:checkKotlinGradlePluginConfigurationErrors' is not up-to-date because:
   Task has not declared any outputs despite executing actions.
-Resolve mutations for :app:checkDebugAarMetadata (Thread[included builds,5,main]) started.
-:app:checkDebugAarMetadata (Thread[included builds,5,main]) started.
-Resolve mutations for :app:generateDebugResValues (Thread[Execution worker Thread 3,5,main]) started.
-:app:generateDebugResValues (Thread[Execution worker Thread 3,5,main]) started.
+Resolve mutations for :app:checkDebugAarMetadata (Thread[Execution worker,5,main]) started.
+:app:checkDebugAarMetadata (Thread[Execution worker,5,main]) started.
+Resolve mutations for :app:generateDebugResValues (Thread[Execution worker Thread 2,5,main]) started.
+:app:generateDebugResValues (Thread[included builds,5,main]) started.
 
 > Task :app:generateDebugResValues
 Caching disabled for task ':app:generateDebugResValues' because:
   Build cache is disabled
 Task ':app:generateDebugResValues' is not up-to-date because:
   No history is available.
-Resolve mutations for :app:mapDebugSourceSetPaths (Thread[Execution worker,5,main]) started.
-:app:mapDebugSourceSetPaths (Thread[Execution worker Thread 3,5,main]) started.
+Resolve mutations for :app:mapDebugSourceSetPaths (Thread[included builds,5,main]) started.
+:app:mapDebugSourceSetPaths (Thread[included builds,5,main]) started.
 
 > Task :app:checkDebugAarMetadata
-Transforming appcompat-resources-1.7.0.aar (androidx.appcompat:appcompat-resources:1.7.0) with ExtractAarTransform
 Transforming appcompat-1.7.0.aar (androidx.appcompat:appcompat:1.7.0) with ExtractAarTransform
 Transforming fragment-1.5.4.aar (androidx.fragment:fragment:1.5.4) with ExtractAarTransform
+Transforming appcompat-resources-1.7.0.aar (androidx.appcompat:appcompat-resources:1.7.0) with ExtractAarTransform
 Transforming activity-1.7.0.aar (androidx.activity:activity:1.7.0) with ExtractAarTransform
-Transforming activity-1.7.0.aar (androidx.activity:activity:1.7.0) with AarTransform
+Transforming fragment-1.5.4.aar (androidx.fragment:fragment:1.5.4) with AarTransform
 Transforming appcompat-resources-1.7.0.aar (androidx.appcompat:appcompat-resources:1.7.0) with AarTransform
+Transforming activity-1.7.0.aar (androidx.activity:activity:1.7.0) with AarTransform
 Transforming drawerlayout-1.0.0.aar (androidx.drawerlayout:drawerlayout:1.0.0) with ExtractAarTransform
 Transforming emoji2-views-helper-1.3.0.aar (androidx.emoji2:emoji2-views-helper:1.3.0) with ExtractAarTransform
 Transforming drawerlayout-1.0.0.aar (androidx.drawerlayout:drawerlayout:1.0.0) with AarTransform
 Transforming emoji2-1.3.0.aar (androidx.emoji2:emoji2:1.3.0) with ExtractAarTransform
-Transforming fragment-1.5.4.aar (androidx.fragment:fragment:1.5.4) with AarTransform
 Transforming emoji2-views-helper-1.3.0.aar (androidx.emoji2:emoji2-views-helper:1.3.0) with AarTransform
 Transforming vectordrawable-animated-1.1.0.aar (androidx.vectordrawable:vectordrawable-animated:1.1.0) with ExtractAarTransform
 Transforming emoji2-1.3.0.aar (androidx.emoji2:emoji2:1.3.0) with AarTransform
 Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with ExtractAarTransform
 Transforming vectordrawable-animated-1.1.0.aar (androidx.vectordrawable:vectordrawable-animated:1.1.0) with AarTransform
-Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with AarTransform
 Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with ExtractAarTransform
 Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with AarTransform
-Transforming appcompat-1.7.0.aar (androidx.appcompat:appcompat:1.7.0) with AarTransform
+Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with AarTransform
 Transforming viewpager-1.0.0.aar (androidx.viewpager:viewpager:1.0.0) with ExtractAarTransform
 Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with ExtractAarTransform
 Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with ExtractAarTransform
+Transforming appcompat-1.7.0.aar (androidx.appcompat:appcompat:1.7.0) with AarTransform
 Transforming loader-1.0.0.aar (androidx.loader:loader:1.0.0) with ExtractAarTransform
-Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with AarTransform
 Transforming viewpager-1.0.0.aar (androidx.viewpager:viewpager:1.0.0) with AarTransform
+Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with AarTransform
 Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with AarTransform
 Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with ExtractAarTransform
 Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with ExtractAarTransform
@@ -251,42 +251,42 @@ Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarTransform
 Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarTransform
 Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarTransform
 Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarTransform
+Transforming savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) with ExtractAarTransform
+Transforming savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) with AarTransform
 Transforming lifecycle-livedata-2.6.2.aar (androidx.lifecycle:lifecycle-livedata:2.6.2) with ExtractAarTransform
 Transforming lifecycle-viewmodel-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel:2.6.2) with ExtractAarTransform
-Transforming savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) with ExtractAarTransform
 Transforming lifecycle-viewmodel-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel:2.6.2) with ExtractAarTransform
-Transforming lifecycle-viewmodel-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel:2.6.2) with AarTransform
-Transforming lifecycle-viewmodel-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel:2.6.2) with AarTransform
-Transforming lifecycle-livedata-2.6.2.aar (androidx.lifecycle:lifecycle-livedata:2.6.2) with AarTransform
-Transforming savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) with AarTransform
 Transforming lifecycle-process-2.6.2.aar (androidx.lifecycle:lifecycle-process:2.6.2) with ExtractAarTransform
+Transforming lifecycle-livedata-2.6.2.aar (androidx.lifecycle:lifecycle-livedata:2.6.2) with AarTransform
 Transforming lifecycle-livedata-core-2.6.2.aar (androidx.lifecycle:lifecycle-livedata-core:2.6.2) with ExtractAarTransform
+Transforming lifecycle-viewmodel-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel:2.6.2) with AarTransform
+Transforming lifecycle-viewmodel-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel:2.6.2) with AarTransform
 Transforming lifecycle-runtime-2.6.2.aar (androidx.lifecycle:lifecycle-runtime:2.6.2) with ExtractAarTransform
 Transforming lifecycle-viewmodel-savedstate-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2) with ExtractAarTransform
-Transforming lifecycle-livedata-core-2.6.2.aar (androidx.lifecycle:lifecycle-livedata-core:2.6.2) with AarTransform
-Transforming core-ktx-1.13.1.aar (androidx.core:core-ktx:1.13.1) with ExtractAarTransform
 Transforming lifecycle-process-2.6.2.aar (androidx.lifecycle:lifecycle-process:2.6.2) with AarTransform
-Transforming lifecycle-runtime-2.6.2.aar (androidx.lifecycle:lifecycle-runtime:2.6.2) with AarTransform
+Transforming core-ktx-1.13.1.aar (androidx.core:core-ktx:1.13.1) with ExtractAarTransform
 Transforming lifecycle-viewmodel-savedstate-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2) with AarTransform
+Transforming lifecycle-livedata-core-2.6.2.aar (androidx.lifecycle:lifecycle-livedata-core:2.6.2) with AarTransform
+Transforming lifecycle-runtime-2.6.2.aar (androidx.lifecycle:lifecycle-runtime:2.6.2) with AarTransform
 Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with ExtractAarTransform
-Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) with ExtractAarTransform
 Transforming core-ktx-1.13.1.aar (androidx.core:core-ktx:1.13.1) with AarTransform
+Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) with ExtractAarTransform
 Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with ExtractAarTransform
 Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with ExtractAarTransform
-Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) with AarTransform
 Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with AarTransform
+Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) with AarTransform
 Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with ExtractAarTransform
-Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with AarTransform
 Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with ExtractAarTransform
+Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with AarTransform
+Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with AarTransform
 Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with AarTransform
 Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with AarTransform
 Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with ExtractAarTransform
-Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with ExtractAarTransform
 Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with ExtractAarTransform
-Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with AarTransform
-Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with AarTransform
+Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with ExtractAarTransform
 Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with AarTransform
 Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with AarTransform
+Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with AarTransform
 Caching disabled for task ':app:checkDebugAarMetadata' because:
   Build cache is disabled
   Caching has been disabled for the task
@@ -375,18 +375,18 @@ Caching disabled for task ':app:mapDebugSourceSetPaths' because:
   Caching has been disabled for the task
 Task ':app:mapDebugSourceSetPaths' is not up-to-date because:
   No history is available.
-Resolve mutations for :app:generateDebugResources (Thread[Execution worker Thread 2,5,main]) started.
-:app:generateDebugResources (Thread[Execution worker Thread 2,5,main]) started.
+Resolve mutations for :app:generateDebugResources (Thread[included builds,5,main]) started.
+:app:generateDebugResources (Thread[included builds,5,main]) started.
 
 > Task :app:generateDebugResources
 Caching disabled for task ':app:generateDebugResources' because:
   Build cache is disabled
 Task ':app:generateDebugResources' is not up-to-date because:
   No history is available.
-Resolve mutations for :app:mergeDebugResources (Thread[Execution worker Thread 2,5,main]) started.
-:app:mergeDebugResources (Thread[included builds,5,main]) started.
-Resolve mutations for :app:packageDebugResources (Thread[Execution worker Thread 3,5,main]) started.
-:app:packageDebugResources (Thread[Execution worker Thread 3,5,main]) started.
+Resolve mutations for :app:mergeDebugResources (Thread[Execution worker,5,main]) started.
+:app:mergeDebugResources (Thread[Execution worker Thread 3,5,main]) started.
+Resolve mutations for :app:packageDebugResources (Thread[Execution worker Thread 2,5,main]) started.
+:app:packageDebugResources (Thread[Execution worker Thread 2,5,main]) started.
 
 > Task :app:packageDebugResources
 Caching disabled for task ':app:packageDebugResources' because:
@@ -395,8 +395,8 @@ Task ':app:packageDebugResources' is not up-to-date because:
   No history is available.
 The input changes require a full rebuild for incremental task ':app:packageDebugResources'.
 [MergeResources] Inputs are non-incremental full task action.
-Resolve mutations for :app:parseDebugLocalResources (Thread[Execution worker Thread 3,5,main]) started.
-:app:parseDebugLocalResources (Thread[Execution worker Thread 3,5,main]) started.
+Resolve mutations for :app:parseDebugLocalResources (Thread[Execution worker Thread 2,5,main]) started.
+:app:parseDebugLocalResources (Thread[Execution worker Thread 2,5,main]) started.
 
 > Task :app:mergeDebugResources
 Caching disabled for task ':app:mergeDebugResources' because:
@@ -405,87 +405,87 @@ Task ':app:mergeDebugResources' is not up-to-date because:
   No history is available.
 The input changes require a full rebuild for incremental task ':app:mergeDebugResources'.
 [MergeResources] Inputs are non-incremental full task action.
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-hi/values-hi.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-hi_values-hi.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values/values.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values_values.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-hi/values-hi.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-hi_values-hi.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-watch-v21/values-watch-v21.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-watch-v21_values-watch-v21.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-pt/values-pt.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-pt_values-pt.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-hy/values-hy.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-hy_values-hy.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-hu/values-hu.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-hu_values-hu.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-hr/values-hr.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-hr_values-hr.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-hu/values-hu.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-hu_values-hu.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-hy/values-hy.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-hy_values-hy.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v17/values-v17.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v17_values-v17.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ldltr-v21/values-ldltr-v21.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ldltr-v21_values-ldltr-v21.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-is/values-is.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-is_values-is.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v18/values-v18.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v18_values-v18.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v17/values-v17.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v17_values-v17.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-zh-rHK/values-zh-rHK.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-zh-rHK_values-zh-rHK.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-b+sr+Latn/values-b+sr+Latn.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-b+sr+Latn_values-b+sr+Latn.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-af/values-af.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-af_values-af.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-zh-rHK/values-zh-rHK.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-zh-rHK_values-zh-rHK.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-es-rUS/values-es-rUS.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-es-rUS_values-es-rUS.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-am/values-am.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-am_values-am.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-iw/values-iw.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-iw_values-iw.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-as/values-as.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-as_values-as.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v25/values-v25.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v25_values-v25.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-am/values-am.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-am_values-am.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-zu/values-zu.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-zu_values-zu.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v21/values-v21.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v21_values-v21.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ja/values-ja.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ja_values-ja.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-sw600dp-v13_values-sw600dp-v13.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-as/values-as.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-as_values-as.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-bn/values-bn.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-bn_values-bn.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v24/values-v24.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v24_values-v24.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ro/values-ro.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ro_values-ro.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ja/values-ja.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ja_values-ja.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ka/values-ka.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ka_values-ka.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ru/values-ru.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ru_values-ru.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v24/values-v24.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v24_values-v24.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ca/values-ca.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ca_values-ca.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-en-rCA/values-en-rCA.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-en-rCA_values-en-rCA.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ro/values-ro.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ro_values-ro.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sv/values-sv.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-sv_values-sv.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v22/values-v22.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v22_values-v22.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sl/values-sl.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-sl_values-sl.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-pt-rPT/values-pt-rPT.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-pt-rPT_values-pt-rPT.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ru/values-ru.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ru_values-ru.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ta/values-ta.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ta_values-ta.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v28/values-v28.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v28_values-v28.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-kk/values-kk.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-kk_values-kk.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-bg/values-bg.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-bg_values-bg.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-en-rCA/values-en-rCA.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-en-rCA_values-en-rCA.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v22/values-v22.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v22_values-v22.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-pt-rPT/values-pt-rPT.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-pt-rPT_values-pt-rPT.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-h720dp-v13/values-h720dp-v13.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-h720dp-v13_values-h720dp-v13.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-xlarge-v4/values-xlarge-v4.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-xlarge-v4_values-xlarge-v4.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-de/values-de.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-de_values-de.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-si/values-si.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-si_values-si.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ko/values-ko.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ko_values-ko.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v28/values-v28.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v28_values-v28.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sl/values-sl.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-sl_values-sl.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-bg/values-bg.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-bg_values-bg.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-en-rIN/values-en-rIN.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-en-rIN_values-en-rIN.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-pt-rBR/values-pt-rBR.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-pt-rBR_values-pt-rBR.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sq/values-sq.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-sq_values-sq.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-kk/values-kk.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-kk_values-kk.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ml/values-ml.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ml_values-ml.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-si/values-si.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-si_values-si.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sq/values-sq.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-sq_values-sq.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-fr-rCA/values-fr-rCA.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-fr-rCA_values-fr-rCA.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-km/values-km.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-km_values-km.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-th/values-th.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-th_values-th.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ko/values-ko.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ko_values-ko.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-my/values-my.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-my_values-my.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-sw/values-sw.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-sw_values-sw.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-vi/values-vi.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-vi_values-vi.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-tr/values-tr.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-tr_values-tr.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-pt-rBR/values-pt-rBR.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-pt-rBR_values-pt-rBR.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-cs/values-cs.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-cs_values-cs.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-vi/values-vi.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-vi_values-vi.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-th/values-th.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-th_values-th.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-tl/values-tl.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-tl_values-tl.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-lt/values-lt.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-lt_values-lt.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ne/values-ne.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ne_values-ne.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ur/values-ur.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ur_values-ur.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-tr/values-tr.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-tr_values-tr.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-lt/values-lt.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-lt_values-lt.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-en-rAU/values-en-rAU.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-en-rAU_values-en-rAU.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-fi/values-fi.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-fi_values-fi.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-lv/values-lv.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-lv_values-lv.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-hdpi-v4/values-hdpi-v4.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-hdpi-v4_values-hdpi-v4.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-ur/values-ur.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-ur_values-ur.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-gl/values-gl.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-gl_values-gl.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-uz/values-uz.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-uz_values-uz.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-mk/values-mk.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-mk_values-mk.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-el/values-el.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-el_values-el.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-uz/values-uz.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-uz_values-uz.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-mr/values-mr.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-mr_values-mr.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-el/values-el.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-el_values-el.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-zh-rTW/values-zh-rTW.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-zh-rTW_values-zh-rTW.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-et/values-et.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-et_values-et.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-eu/values-eu.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-eu_values-eu.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-night-v8_values-night-v8.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-zh-rCN/values-zh-rCN.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-zh-rCN_values-zh-rCN.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-port/values-port.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-port_values-port.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-large-v4_values-large-v4.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-nl/values-nl.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-nl_values-nl.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-night-v8_values-night-v8.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-fr/values-fr.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-fr_values-fr.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-zh-rCN/values-zh-rCN.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-zh-rCN_values-zh-rCN.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-land/values-land.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-land_values-land.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-large-v4_values-large-v4.arsc.flat
+Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-pa/values-pa.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-pa_values-pa.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-or/values-or.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-or_values-or.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-pl/values-pl.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-pl_values-pl.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-fr/values-fr.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-fr_values-fr.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-land/values-land.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-land_values-land.arsc.flat
-Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-pa/values-pa.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-pa_values-pa.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-watch-v20_values-watch-v20.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-v16/values-v16.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-v16_values-v16.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-in/values-in.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-in_values-in.arsc.flat
@@ -512,8 +512,8 @@ Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/ap
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-en-rXC/values-en-rXC.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-en-rXC_values-en-rXC.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-en-rGB/values-en-rGB.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-en-rGB_values-en-rGB.arsc.flat
 Compiling XML table /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/incremental/debug/mergeDebugResources/merged.dir/values-gu/values-gu.xml to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_res/debug/mergeDebugResources/values-gu_values-gu.arsc.flat
-Resolve mutations for :app:createDebugCompatibleScreenManifests (Thread[included builds,5,main]) started.
-:app:createDebugCompatibleScreenManifests (Thread[included builds,5,main]) started.
+Resolve mutations for :app:createDebugCompatibleScreenManifests (Thread[Execution worker Thread 3,5,main]) started.
+:app:createDebugCompatibleScreenManifests (Thread[Execution worker Thread 3,5,main]) started.
 
 > Task :app:createDebugCompatibleScreenManifests
 Caching disabled for task ':app:createDebugCompatibleScreenManifests' because:
@@ -521,7 +521,7 @@ Caching disabled for task ':app:createDebugCompatibleScreenManifests' because:
   Caching has been disabled for the task
 Task ':app:createDebugCompatibleScreenManifests' is not up-to-date because:
   No history is available.
-Resolve mutations for :app:extractDeepLinksDebug (Thread[Execution worker,5,main]) started.
+Resolve mutations for :app:extractDeepLinksDebug (Thread[Execution worker Thread 3,5,main]) started.
 :app:extractDeepLinksDebug (Thread[Execution worker,5,main]) started.
 
 > Task :app:extractDeepLinksDebug
@@ -529,8 +529,8 @@ Caching disabled for task ':app:extractDeepLinksDebug' because:
   Build cache is disabled
 Task ':app:extractDeepLinksDebug' is not up-to-date because:
   No history is available.
-Resolve mutations for :app:processDebugMainManifest (Thread[included builds,5,main]) started.
-:app:processDebugMainManifest (Thread[included builds,5,main]) started.
+Resolve mutations for :app:processDebugMainManifest (Thread[Execution worker,5,main]) started.
+:app:processDebugMainManifest (Thread[Execution worker,5,main]) started.
 
 > Task :app:parseDebugLocalResources
 Transforming android.jar with PlatformAttrTransform
@@ -1034,45 +1034,18 @@ Merging result: SUCCESS
 95</manifest>
 
 Merged manifest saved to /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/merged_manifest/debug/processDebugMainManifest/AndroidManifest.xml
-Resolve mutations for :app:processDebugManifest (Thread[included builds,5,main]) started.
-:app:processDebugManifest (Thread[included builds,5,main]) started.
+Resolve mutations for :app:processDebugManifest (Thread[Execution worker,5,main]) started.
+:app:processDebugManifest (Thread[Execution worker Thread 2,5,main]) started.
 
 > Task :app:processDebugManifest
 Caching disabled for task ':app:processDebugManifest' because:
   Build cache is disabled
 Task ':app:processDebugManifest' is not up-to-date because:
   No history is available.
-Resolve mutations for :app:processDebugManifestForPackage (Thread[Execution worker Thread 3,5,main]) started.
-:app:processDebugManifestForPackage (Thread[Execution worker Thread 3,5,main]) started.
-Resolve mutations for :app:javaPreCompileDebug (Thread[included builds,5,main]) started.
-:app:javaPreCompileDebug (Thread[Execution worker Thread 2,5,main]) started.
-Resolve mutations for :app:mergeDebugShaders (Thread[included builds,5,main]) started.
-:app:mergeDebugShaders (Thread[included builds,5,main]) started.
-
-> Task :app:javaPreCompileDebug
-Caching disabled for task ':app:javaPreCompileDebug' because:
-  Build cache is disabled
-Task ':app:javaPreCompileDebug' is not up-to-date because:
-  No history is available.
-
-> Task :app:mergeDebugShaders
-Caching disabled for task ':app:mergeDebugShaders' because:
-  Build cache is disabled
-  Simple merging task
-Task ':app:mergeDebugShaders' is not up-to-date because:
-  No history is available.
-The input changes require a full rebuild for incremental task ':app:mergeDebugShaders'.
-Resolve mutations for :app:compileDebugShaders (Thread[Execution worker Thread 2,5,main]) started.
-:app:compileDebugShaders (Thread[Execution worker Thread 2,5,main]) started.
-
-> Task :app:compileDebugShaders NO-SOURCE
-Skipping task ':app:compileDebugShaders' as it has no source files and no previous output files.
-Resolve mutations for :app:generateDebugAssets (Thread[included builds,5,main]) started.
-:app:generateDebugAssets (Thread[included builds,5,main]) started.
-
-> Task :app:generateDebugAssets UP-TO-DATE
-Skipping task ':app:generateDebugAssets' as it has no actions.
-Resolve mutations for :app:mergeDebugAssets (Thread[Execution worker Thread 2,5,main]) started.
+Resolve mutations for :app:processDebugManifestForPackage (Thread[Execution worker Thread 2,5,main]) started.
+:app:processDebugManifestForPackage (Thread[Execution worker Thread 2,5,main]) started.
+Resolve mutations for :app:javaPreCompileDebug (Thread[Execution worker,5,main]) started.
+:app:javaPreCompileDebug (Thread[Execution worker,5,main]) started.
 
 > Task :app:processDebugManifestForPackage
 Custom actions are attached to task ':app:processDebugManifestForPackage'.
@@ -1082,7 +1055,34 @@ Task ':app:processDebugManifestForPackage' is not up-to-date because:
   No history is available.
 Resolve mutations for :app:processDebugResources (Thread[Execution worker Thread 2,5,main]) started.
 :app:processDebugResources (Thread[Execution worker Thread 2,5,main]) started.
-:app:mergeDebugAssets (Thread[Execution worker Thread 3,5,main]) started.
+
+> Task :app:javaPreCompileDebug
+Caching disabled for task ':app:javaPreCompileDebug' because:
+  Build cache is disabled
+Task ':app:javaPreCompileDebug' is not up-to-date because:
+  No history is available.
+Resolve mutations for :app:mergeDebugShaders (Thread[Execution worker,5,main]) started.
+:app:mergeDebugShaders (Thread[Execution worker,5,main]) started.
+
+> Task :app:mergeDebugShaders
+Caching disabled for task ':app:mergeDebugShaders' because:
+  Build cache is disabled
+  Simple merging task
+Task ':app:mergeDebugShaders' is not up-to-date because:
+  No history is available.
+The input changes require a full rebuild for incremental task ':app:mergeDebugShaders'.
+Resolve mutations for :app:compileDebugShaders (Thread[Execution worker Thread 3,5,main]) started.
+:app:compileDebugShaders (Thread[Execution worker Thread 3,5,main]) started.
+
+> Task :app:compileDebugShaders NO-SOURCE
+Skipping task ':app:compileDebugShaders' as it has no source files and no previous output files.
+Resolve mutations for :app:generateDebugAssets (Thread[included builds,5,main]) started.
+:app:generateDebugAssets (Thread[included builds,5,main]) started.
+
+> Task :app:generateDebugAssets UP-TO-DATE
+Skipping task ':app:generateDebugAssets' as it has no actions.
+Resolve mutations for :app:mergeDebugAssets (Thread[included builds,5,main]) started.
+:app:mergeDebugAssets (Thread[included builds,5,main]) started.
 
 > Task :app:mergeDebugAssets
 Transforming appcompat-resources-1.7.0.aar (androidx.appcompat:appcompat-resources:1.7.0) with ExtractAarTransform
@@ -1167,7 +1167,7 @@ Caching disabled for task ':app:mergeDebugAssets' because:
 Task ':app:mergeDebugAssets' is not up-to-date because:
   No history is available.
 The input changes require a full rebuild for incremental task ':app:mergeDebugAssets'.
-Resolve mutations for :app:compressDebugAssets (Thread[Execution worker,5,main]) started.
+Resolve mutations for :app:compressDebugAssets (Thread[Execution worker Thread 3,5,main]) started.
 :app:compressDebugAssets (Thread[Execution worker,5,main]) started.
 
 > Task :app:compressDebugAssets
@@ -1176,8 +1176,8 @@ Caching disabled for task ':app:compressDebugAssets' because:
 Task ':app:compressDebugAssets' is not up-to-date because:
   No history is available.
 The input changes require a full rebuild for incremental task ':app:compressDebugAssets'.
-Resolve mutations for :app:desugarDebugFileDependencies (Thread[Execution worker Thread 3,5,main]) started.
-:app:desugarDebugFileDependencies (Thread[Execution worker Thread 3,5,main]) started.
+Resolve mutations for :app:desugarDebugFileDependencies (Thread[Execution worker,5,main]) started.
+:app:desugarDebugFileDependencies (Thread[Execution worker,5,main]) started.
 
 > Task :app:desugarDebugFileDependencies
 Caching disabled for task ':app:desugarDebugFileDependencies' because:
@@ -1185,8 +1185,8 @@ Caching disabled for task ':app:desugarDebugFileDependencies' because:
 Task ':app:desugarDebugFileDependencies' is not up-to-date because:
   No history is available.
 Resolve mutations for :app:checkDebugDuplicateClasses (Thread[Execution worker,5,main]) started.
-:app:checkDebugDuplicateClasses (Thread[Execution worker Thread 3,5,main]) started.
-Resolve mutations for :app:mergeDebugStartupProfile (Thread[Execution worker,5,main]) started.
+:app:checkDebugDuplicateClasses (Thread[Execution worker,5,main]) started.
+Resolve mutations for :app:mergeDebugStartupProfile (Thread[Execution worker Thread 3,5,main]) started.
 :app:mergeDebugStartupProfile (Thread[included builds,5,main]) started.
 
 > Task :app:mergeDebugStartupProfile
@@ -1206,13 +1206,14 @@ Caching disabled for task ':app:mergeDebugJniLibFolders' because:
 Task ':app:mergeDebugJniLibFolders' is not up-to-date because:
   No history is available.
 The input changes require a full rebuild for incremental task ':app:mergeDebugJniLibFolders'.
-Resolve mutations for :app:mergeDebugNativeLibs (Thread[included builds,5,main]) started.
-:app:mergeDebugNativeLibs (Thread[included builds,5,main]) started.
+Resolve mutations for :app:mergeDebugNativeLibs (Thread[Execution worker Thread 3,5,main]) started.
+:app:mergeDebugNativeLibs (Thread[Execution worker Thread 3,5,main]) started.
 
 > Task :app:checkDebugDuplicateClasses
 Transforming appcompat-resources-1.7.0.aar (androidx.appcompat:appcompat-resources:1.7.0) with AarToClassTransform
 Transforming appcompat-1.7.0.aar (androidx.appcompat:appcompat:1.7.0) with AarToClassTransform
 Transforming fragment-1.5.4.aar (androidx.fragment:fragment:1.5.4) with AarToClassTransform
+Transforming appcompat-resources-1.7.0.aar (androidx.appcompat:appcompat-resources:1.7.0) with EnumerateClassesTransform
 Transforming activity-1.7.0.aar (androidx.activity:activity:1.7.0) with AarToClassTransform
 Transforming drawerlayout-1.0.0.aar (androidx.drawerlayout:drawerlayout:1.0.0) with AarToClassTransform
 Transforming emoji2-views-helper-1.3.0.aar (androidx.emoji2:emoji2-views-helper:1.3.0) with AarToClassTransform
@@ -1223,7 +1224,6 @@ Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.
 Transforming viewpager-1.0.0.aar (androidx.viewpager:viewpager:1.0.0) with AarToClassTransform
 Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with AarToClassTransform
 Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with AarToClassTransform
-Transforming appcompat-resources-1.7.0.aar (androidx.appcompat:appcompat-resources:1.7.0) with EnumerateClassesTransform
 Transforming loader-1.0.0.aar (androidx.loader:loader:1.0.0) with AarToClassTransform
 Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarToClassTransform
 Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarToClassTransform
@@ -1238,75 +1238,75 @@ Transforming lifecycle-viewmodel-2.6.2.aar (androidx.lifecycle:lifecycle-viewmod
 Transforming lifecycle-process-2.6.2.aar (androidx.lifecycle:lifecycle-process:2.6.2) with AarToClassTransform
 Transforming lifecycle-livedata-core-2.6.2.aar (androidx.lifecycle:lifecycle-livedata-core:2.6.2) with AarToClassTransform
 Transforming appcompat-1.7.0.aar (androidx.appcompat:appcompat:1.7.0) with EnumerateClassesTransform
-Transforming activity-1.7.0.aar (androidx.activity:activity:1.7.0) with EnumerateClassesTransform
+Transforming fragment-1.5.4.aar (androidx.fragment:fragment:1.5.4) with EnumerateClassesTransform
 Transforming lifecycle-runtime-2.6.2.aar (androidx.lifecycle:lifecycle-runtime:2.6.2) with AarToClassTransform
 Transforming lifecycle-viewmodel-savedstate-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2) with AarToClassTransform
 Transforming core-ktx-1.13.1.aar (androidx.core:core-ktx:1.13.1) with AarToClassTransform
 Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with AarToClassTransform
 Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) with AarToClassTransform
 Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with AarToClassTransform
+Transforming emoji2-views-helper-1.3.0.aar (androidx.emoji2:emoji2-views-helper:1.3.0) with EnumerateClassesTransform
 Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with AarToClassTransform
 Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with AarToClassTransform
 Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with AarToClassTransform
 Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with AarToClassTransform
 Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with AarToClassTransform
+Transforming drawerlayout-1.0.0.aar (androidx.drawerlayout:drawerlayout:1.0.0) with EnumerateClassesTransform
 Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with AarToClassTransform
 Transforming annotations-13.0.jar (org.jetbrains:annotations:13.0) with IdentityTransform
-Transforming emoji2-views-helper-1.3.0.aar (androidx.emoji2:emoji2-views-helper:1.3.0) with EnumerateClassesTransform
-Transforming drawerlayout-1.0.0.aar (androidx.drawerlayout:drawerlayout:1.0.0) with EnumerateClassesTransform
 Transforming emoji2-1.3.0.aar (androidx.emoji2:emoji2:1.3.0) with EnumerateClassesTransform
 Transforming vectordrawable-animated-1.1.0.aar (androidx.vectordrawable:vectordrawable-animated:1.1.0) with EnumerateClassesTransform
 Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with EnumerateClassesTransform
 Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with EnumerateClassesTransform
-Transforming viewpager-1.0.0.aar (androidx.viewpager:viewpager:1.0.0) with EnumerateClassesTransform
 Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with EnumerateClassesTransform
+Transforming viewpager-1.0.0.aar (androidx.viewpager:viewpager:1.0.0) with EnumerateClassesTransform
 Transforming loader-1.0.0.aar (androidx.loader:loader:1.0.0) with EnumerateClassesTransform
 Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with EnumerateClassesTransform
 Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with EnumerateClassesTransform
-Transforming lifecycle-livedata-2.6.2.aar (androidx.lifecycle:lifecycle-livedata:2.6.2) with EnumerateClassesTransform
+Transforming lifecycle-viewmodel-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel:2.6.2) with EnumerateClassesTransform
 Transforming savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) with EnumerateClassesTransform
 Transforming lifecycle-viewmodel-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel:2.6.2) with EnumerateClassesTransform
-Transforming lifecycle-viewmodel-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel:2.6.2) with EnumerateClassesTransform
+Transforming lifecycle-livedata-2.6.2.aar (androidx.lifecycle:lifecycle-livedata:2.6.2) with EnumerateClassesTransform
 Transforming lifecycle-process-2.6.2.aar (androidx.lifecycle:lifecycle-process:2.6.2) with EnumerateClassesTransform
-Transforming lifecycle-common-2.6.2.jar (androidx.lifecycle:lifecycle-common:2.6.2) with IdentityTransform
 Transforming lifecycle-livedata-core-2.6.2.aar (androidx.lifecycle:lifecycle-livedata-core:2.6.2) with EnumerateClassesTransform
-Transforming lifecycle-common-2.6.2.jar (androidx.lifecycle:lifecycle-common:2.6.2) with EnumerateClassesTransform
 Transforming lifecycle-runtime-2.6.2.aar (androidx.lifecycle:lifecycle-runtime:2.6.2) with EnumerateClassesTransform
+Transforming lifecycle-common-2.6.2.jar (androidx.lifecycle:lifecycle-common:2.6.2) with IdentityTransform
 Transforming lifecycle-viewmodel-savedstate-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2) with EnumerateClassesTransform
-Transforming core-ktx-1.13.1.aar (androidx.core:core-ktx:1.13.1) with EnumerateClassesTransform
+Transforming lifecycle-common-2.6.2.jar (androidx.lifecycle:lifecycle-common:2.6.2) with EnumerateClassesTransform
 Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with EnumerateClassesTransform
+Transforming core-ktx-1.13.1.aar (androidx.core:core-ktx:1.13.1) with EnumerateClassesTransform
 Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) with EnumerateClassesTransform
 Transforming resourceinspection-annotation-1.0.1.jar (androidx.resourceinspection:resourceinspection-annotation:1.0.1) with IdentityTransform
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with EnumerateClassesTransform
 Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with EnumerateClassesTransform
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with EnumerateClassesTransform
 Transforming resourceinspection-annotation-1.0.1.jar (androidx.resourceinspection:resourceinspection-annotation:1.0.1) with EnumerateClassesTransform
 Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with EnumerateClassesTransform
-Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with EnumerateClassesTransform
-Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with EnumerateClassesTransform
+Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with EnumerateClassesTransform
 Transforming collection-1.1.0.jar (androidx.collection:collection:1.1.0) with IdentityTransform
 Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with EnumerateClassesTransform
-Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with EnumerateClassesTransform
 Transforming collection-1.1.0.jar (androidx.collection:collection:1.1.0) with EnumerateClassesTransform
 Transforming concurrent-futures-1.1.0.jar (androidx.concurrent:concurrent-futures:1.1.0) with IdentityTransform
 Transforming core-common-2.2.0.jar (androidx.arch.core:core-common:2.2.0) with IdentityTransform
 Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with EnumerateClassesTransform
 Transforming concurrent-futures-1.1.0.jar (androidx.concurrent:concurrent-futures:1.1.0) with EnumerateClassesTransform
-Transforming core-common-2.2.0.jar (androidx.arch.core:core-common:2.2.0) with EnumerateClassesTransform
 Transforming annotation-jvm-1.6.0.jar (androidx.annotation:annotation-jvm:1.6.0) with IdentityTransform
+Transforming core-common-2.2.0.jar (androidx.arch.core:core-common:2.2.0) with EnumerateClassesTransform
+Transforming annotation-jvm-1.6.0.jar (androidx.annotation:annotation-jvm:1.6.0) with EnumerateClassesTransform
 Transforming kotlinx-coroutines-core-jvm-1.6.4.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4) with IdentityTransform
 Transforming kotlinx-coroutines-android-1.6.4.jar (org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4) with IdentityTransform
-Transforming kotlinx-coroutines-core-jvm-1.6.4.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4) with EnumerateClassesTransform
-Transforming kotlinx-coroutines-android-1.6.4.jar (org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4) with EnumerateClassesTransform
-Transforming annotation-jvm-1.6.0.jar (androidx.annotation:annotation-jvm:1.6.0) with EnumerateClassesTransform
 Transforming kotlin-stdlib-jdk8-1.8.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0) with IdentityTransform
+Transforming kotlinx-coroutines-android-1.6.4.jar (org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4) with EnumerateClassesTransform
 Transforming kotlin-stdlib-jdk7-1.8.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0) with IdentityTransform
-Transforming kotlin-stdlib-1.9.24.jar (org.jetbrains.kotlin:kotlin-stdlib:1.9.24) with IdentityTransform
 Transforming kotlin-stdlib-jdk8-1.8.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0) with EnumerateClassesTransform
 Transforming kotlin-stdlib-jdk7-1.8.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0) with EnumerateClassesTransform
-Transforming kotlin-stdlib-1.9.24.jar (org.jetbrains.kotlin:kotlin-stdlib:1.9.24) with EnumerateClassesTransform
-Transforming annotations-13.0.jar (org.jetbrains:annotations:13.0) with EnumerateClassesTransform
+Transforming kotlinx-coroutines-core-jvm-1.6.4.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4) with EnumerateClassesTransform
 Transforming listenablefuture-1.0.jar (com.google.guava:listenablefuture:1.0) with IdentityTransform
+Transforming kotlin-stdlib-1.9.24.jar (org.jetbrains.kotlin:kotlin-stdlib:1.9.24) with IdentityTransform
+Transforming annotations-13.0.jar (org.jetbrains:annotations:13.0) with EnumerateClassesTransform
 Transforming listenablefuture-1.0.jar (com.google.guava:listenablefuture:1.0) with EnumerateClassesTransform
-Transforming fragment-1.5.4.aar (androidx.fragment:fragment:1.5.4) with EnumerateClassesTransform
+Transforming kotlin-stdlib-1.9.24.jar (org.jetbrains.kotlin:kotlin-stdlib:1.9.24) with EnumerateClassesTransform
+Transforming activity-1.7.0.aar (androidx.activity:activity:1.7.0) with EnumerateClassesTransform
 Caching disabled for task ':app:checkDebugDuplicateClasses' because:
   Build cache is disabled
   Caching has been disabled for the task
@@ -1366,9 +1366,6 @@ Transforming lifecycle-process-2.6.2.aar (androidx.lifecycle:lifecycle-process:2
 Transforming lifecycle-process-2.6.2.aar (androidx.lifecycle:lifecycle-process:2.6.2) with AarTransform
 Transforming lifecycle-livedata-core-2.6.2.aar (androidx.lifecycle:lifecycle-livedata-core:2.6.2) with ExtractAarTransform
 Transforming lifecycle-livedata-core-2.6.2.aar (androidx.lifecycle:lifecycle-livedata-core:2.6.2) with AarTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/e97b8fec522e0237fe171c43b96f412b/transformed/appcompat-resources-1.7.0 because:
-  Build cache is disabled
-  Caching not enabled.
 Transforming lifecycle-common-2.6.2.jar (androidx.lifecycle:lifecycle-common:2.6.2) with ExtractJniTransform
 Transforming lifecycle-runtime-2.6.2.aar (androidx.lifecycle:lifecycle-runtime:2.6.2) with ExtractAarTransform
 Transforming lifecycle-runtime-2.6.2.aar (androidx.lifecycle:lifecycle-runtime:2.6.2) with AarTransform
@@ -1383,9 +1380,6 @@ Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0
 Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with ExtractAarTransform
 Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with AarTransform
 Transforming resourceinspection-annotation-1.0.1.jar (androidx.resourceinspection:resourceinspection-annotation:1.0.1) with ExtractJniTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/36b3856ba9c7cbbdc36c1fd5fe2a4d44/transformed/appcompat-1.7.0 because:
-  Build cache is disabled
-  Caching not enabled.
 Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with ExtractAarTransform
 Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with AarTransform
 Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with ExtractAarTransform
@@ -1409,125 +1403,18 @@ Transforming kotlin-stdlib-jdk7-1.8.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jd
 Transforming kotlin-stdlib-1.9.24.jar (org.jetbrains.kotlin:kotlin-stdlib:1.9.24) with ExtractJniTransform
 Transforming annotations-13.0.jar (org.jetbrains:annotations:13.0) with ExtractJniTransform
 Transforming listenablefuture-1.0.jar (com.google.guava:listenablefuture:1.0) with ExtractJniTransform
-Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/411221435fc598ea6c45743869d650e3/transformed/activity-1.7.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/dc9369d3a3308050fc6782cf03ea6014/transformed/emoji2-views-helper-1.3.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/1e4f6426e152c763ff866d1516128b91/transformed/drawerlayout-1.0.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/192474c036ec43764acdf6f3e34ae042/transformed/emoji2-1.3.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/66e87927202b5219b442b09f9c258f07/transformed/vectordrawable-animated-1.1.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/54f7211a0261829208bd57042dfaa330/transformed/vectordrawable-1.1.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/8cf63126afecb5baa428a1cf8e5c8ba0/transformed/viewpager-1.0.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/f3fda6a219a531beb4042fe3d2b5996e/transformed/customview-1.0.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/e2846cd86094a5772d00090bc5999692/transformed/loader-1.0.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/8e0a0bff2d388b6446750efdf4a5758f/transformed/core-1.13.1 because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/4bd627a9048f6ce18b1b2d88bd05a714/transformed/savedstate-1.2.1 because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/475157b7fb9afaa8cbd268d644c85bc1/transformed/lifecycle-viewmodel-2.6.2 because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/a1eb4c955a5536edee1a0604e5a8d871/transformed/lifecycle-livedata-2.6.2 because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/2123c70e0b087a565ece9761afcdf5e2/transformed/lifecycle-livedata-core-2.6.2 because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common/2.6.2/10f354fdb64868baecd67128560c5a0d6312c495/lifecycle-common-2.6.2.jar because:
-  Build cache is disabled
-Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/44d9374c2fc79a1ce870385ec114cea5/transformed/lifecycle-process-2.6.2 because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/f0d9cfbdb784c10d6a0f1a5315cd19fe/transformed/lifecycle-runtime-2.6.2 because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/075303c1a579c423313bb64f570c90a9/transformed/lifecycle-viewmodel-savedstate-2.6.2 because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/ee0481a11330c26fe06a00831ef0481b/transformed/core-ktx-1.13.1 because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/b602daaf2448be52ca00da64464dbe99/transformed/annotation-experimental-1.4.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/c829f663b97a5e70a3d902a476572ec8/transformed/cursoradapter-1.0.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/4e16cc280eaa0a1f5277c41379c36ea2/transformed/profileinstaller-1.3.1 because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/0f311b49bca424a420b7c2ea65cfd17b/transformed/interpolator-1.0.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.resourceinspection/resourceinspection-annotation/1.0.1/8c21f8ff5d96d5d52c948707f7e4d6ca6773feef/resourceinspection-annotation-1.0.1.jar because:
-  Build cache is disabled
-Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/e76f1b767bbdaf61093fe6fdbd88b122/transformed/versionedparcelable-1.1.1 because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/3cd12336f22dc1b12fb756d64dc91d51/transformed/tracing-1.0.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/705c330e03d4e2fcb62a924d14782115/transformed/startup-runtime-1.1.1 because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.concurrent/concurrent-futures/1.1.0/50b7fb98350d5f42a4e49704b03278542293ba48/concurrent-futures-1.1.0.jar because:
-  Build cache is disabled
-Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.collection/collection/1.1.0/1f27220b47669781457de0d600849a5de0e89909/collection-1.1.0.jar because:
-  Build cache is disabled
-Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/35b3db2516afa50d8f7eeea7a2525269/transformed/core-runtime-2.2.0 because:
-  Build cache is disabled
-  Caching not enabled.
-Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-common/2.2.0/5e1b8b81dfd5f52c56a8d53b18ca759c19a301f3/core-common-2.2.0.jar because:
-  Build cache is disabled
-Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-jvm/1.6.4/2c997cd1c0ef33f3e751d3831929aeff1390cb30/kotlinx-coroutines-core-jvm-1.6.4.jar because:
-  Build cache is disabled
-Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation-jvm/1.6.0/a7257339a052df0f91433cf9651231bbb802b502/annotation-jvm-1.6.0.jar because:
-  Build cache is disabled
-Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-android/1.6.4/f955fc8b2ad196e2f4429598440e15f7492eeb2b/kotlinx-coroutines-android-1.6.4.jar because:
-  Build cache is disabled
-Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.8.0/ed04f49e186a116753ad70d34f0ac2925d1d8020/kotlin-stdlib-jdk8-1.8.0.jar because:
-  Build cache is disabled
-Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.8.0/3c91271347f678c239607abb676d4032a7898427/kotlin-stdlib-jdk7-1.8.0.jar because:
-  Build cache is disabled
-Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.9.24/9928532f12c66ad816a625b3f9984f8368ca6d2b/kotlin-stdlib-1.9.24.jar because:
-  Build cache is disabled
-Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar because:
-  Build cache is disabled
-Caching disabled for ExtractJniTransform: /home/runner/.gradle/caches/modules-2/files-2.1/com.google.guava/listenablefuture/1.0/c949a840a6acbc5268d088e47b04177bf90b3cad/listenablefuture-1.0.jar because:
-  Build cache is disabled
-Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/3d9efbf281507841f2c86d9fd1c4139f/transformed/fragment-1.5.4 because:
-  Build cache is disabled
-  Caching not enabled.
 Skipping task ':app:mergeDebugNativeLibs' as it has no source files and no previous output files.
-Resolve mutations for :app:mergeExtDexDebug (Thread[included builds,5,main]) started.
-:app:mergeExtDexDebug (Thread[included builds,5,main]) started.
-Resolve mutations for :app:mergeLibDexDebug (Thread[Execution worker Thread 3,5,main]) started.
-:app:mergeLibDexDebug (Thread[Execution worker,5,main]) started.
-Resolve mutations for :app:stripDebugDebugSymbols (Thread[Execution worker Thread 3,5,main]) started.
-:app:stripDebugDebugSymbols (Thread[Execution worker Thread 3,5,main]) started.
+Resolve mutations for :app:mergeExtDexDebug (Thread[Execution worker Thread 3,5,main]) started.
+:app:mergeExtDexDebug (Thread[Execution worker Thread 3,5,main]) started.
+Resolve mutations for :app:mergeLibDexDebug (Thread[Execution worker,5,main]) started.
+:app:mergeLibDexDebug (Thread[included builds,5,main]) started.
+Resolve mutations for :app:stripDebugDebugSymbols (Thread[Execution worker,5,main]) started.
+:app:stripDebugDebugSymbols (Thread[Execution worker,5,main]) started.
 
 > Task :app:stripDebugDebugSymbols NO-SOURCE
 Skipping task ':app:stripDebugDebugSymbols' as it has no source files and no previous output files.
-Resolve mutations for :app:validateSigningDebug (Thread[Execution worker Thread 3,5,main]) started.
-:app:validateSigningDebug (Thread[Execution worker Thread 3,5,main]) started.
+Resolve mutations for :app:validateSigningDebug (Thread[Execution worker,5,main]) started.
+:app:validateSigningDebug (Thread[Execution worker,5,main]) started.
 
 > Task :app:mergeLibDexDebug
 Caching disabled for task ':app:mergeLibDexDebug' because:
@@ -1705,10 +1592,10 @@ Caching disabled for task ':app:validateSigningDebug' because:
 Task ':app:validateSigningDebug' is not up-to-date because:
   Task.upToDateWhen is false.
 Creating default debug keystore at /home/runner/.config/.android/debug.keystore
-Resolve mutations for :app:compileDebugKotlin (Thread[Execution worker Thread 2,5,main]) started.
-:app:compileDebugKotlin (Thread[Execution worker Thread 3,5,main]) started.
+Resolve mutations for :app:compileDebugKotlin (Thread[Execution worker,5,main]) started.
+:app:compileDebugKotlin (Thread[Execution worker Thread 2,5,main]) started.
 Resolve mutations for :app:writeDebugAppMetadata (Thread[Execution worker,5,main]) started.
-:app:writeDebugAppMetadata (Thread[Execution worker Thread 2,5,main]) started.
+:app:writeDebugAppMetadata (Thread[Execution worker,5,main]) started.
 
 > Task :app:writeDebugAppMetadata
 Caching disabled for task ':app:writeDebugAppMetadata' because:
@@ -1716,8 +1603,8 @@ Caching disabled for task ':app:writeDebugAppMetadata' because:
   Caching has been disabled for the task
 Task ':app:writeDebugAppMetadata' is not up-to-date because:
   No history is available.
-Resolve mutations for :app:writeDebugSigningConfigVersions (Thread[Execution worker Thread 2,5,main]) started.
-:app:writeDebugSigningConfigVersions (Thread[Execution worker Thread 2,5,main]) started.
+Resolve mutations for :app:writeDebugSigningConfigVersions (Thread[included builds,5,main]) started.
+:app:writeDebugSigningConfigVersions (Thread[included builds,5,main]) started.
 
 > Task :app:writeDebugSigningConfigVersions
 Caching disabled for task ':app:writeDebugSigningConfigVersions' because:
@@ -1733,22 +1620,28 @@ Transforming appcompat-1.7.0.aar (androidx.appcompat:appcompat:1.7.0) with AarTo
 Transforming appcompat-1.7.0.aar (androidx.appcompat:appcompat:1.7.0) with IdentityTransform
 Transforming fragment-1.5.4.aar (androidx.fragment:fragment:1.5.4) with AarToClassTransform
 Transforming fragment-1.5.4.aar (androidx.fragment:fragment:1.5.4) with IdentityTransform
+Transforming appcompat-1.7.0.aar (androidx.appcompat:appcompat:1.7.0) with DexingNoClasspathTransform
+Transforming appcompat-resources-1.7.0.aar (androidx.appcompat:appcompat-resources:1.7.0) with DexingNoClasspathTransform
+Transforming appcompat-resources-1.7.0.aar (androidx.appcompat:appcompat-resources:1.7.0) with DexingOutputSplitTransform
 Transforming activity-1.7.0.aar (androidx.activity:activity:1.7.0) with AarToClassTransform
 Transforming activity-1.7.0.aar (androidx.activity:activity:1.7.0) with IdentityTransform
 Transforming drawerlayout-1.0.0.aar (androidx.drawerlayout:drawerlayout:1.0.0) with AarToClassTransform
 Transforming drawerlayout-1.0.0.aar (androidx.drawerlayout:drawerlayout:1.0.0) with IdentityTransform
-Transforming appcompat-1.7.0.aar (androidx.appcompat:appcompat:1.7.0) with DexingNoClasspathTransform
 Transforming emoji2-views-helper-1.3.0.aar (androidx.emoji2:emoji2-views-helper:1.3.0) with AarToClassTransform
+Transforming appcompat-1.7.0.aar (androidx.appcompat:appcompat:1.7.0) with DexingOutputSplitTransform
 Transforming emoji2-views-helper-1.3.0.aar (androidx.emoji2:emoji2-views-helper:1.3.0) with IdentityTransform
 Transforming emoji2-1.3.0.aar (androidx.emoji2:emoji2:1.3.0) with AarToClassTransform
 Transforming emoji2-1.3.0.aar (androidx.emoji2:emoji2:1.3.0) with IdentityTransform
 Transforming vectordrawable-animated-1.1.0.aar (androidx.vectordrawable:vectordrawable-animated:1.1.0) with AarToClassTransform
 Transforming vectordrawable-animated-1.1.0.aar (androidx.vectordrawable:vectordrawable-animated:1.1.0) with IdentityTransform
+Transforming activity-1.7.0.aar (androidx.activity:activity:1.7.0) with DexingNoClasspathTransform
 Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with AarToClassTransform
 Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with IdentityTransform
 Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with AarToClassTransform
 Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with IdentityTransform
+Transforming drawerlayout-1.0.0.aar (androidx.drawerlayout:drawerlayout:1.0.0) with DexingNoClasspathTransform
 Transforming viewpager-1.0.0.aar (androidx.viewpager:viewpager:1.0.0) with AarToClassTransform
+Transforming activity-1.7.0.aar (androidx.activity:activity:1.7.0) with DexingOutputSplitTransform
 Transforming viewpager-1.0.0.aar (androidx.viewpager:viewpager:1.0.0) with IdentityTransform
 Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with AarToClassTransform
 Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with IdentityTransform
@@ -1759,7 +1652,6 @@ Transforming loader-1.0.0.aar (androidx.loader:loader:1.0.0) with IdentityTransf
 Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarToClassTransform
 Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with IdentityTransform
 Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarToClassTransform
-Transforming appcompat-resources-1.7.0.aar (androidx.appcompat:appcompat-resources:1.7.0) with DexingNoClasspathTransform
 Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with IdentityTransform
 Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarToClassTransform
 Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with IdentityTransform
@@ -1771,20 +1663,22 @@ Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarToClassTransfor
 Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with IdentityTransform
 Transforming savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) with AarToClassTransform
 Transforming savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) with IdentityTransform
-Transforming appcompat-resources-1.7.0.aar (androidx.appcompat:appcompat-resources:1.7.0) with DexingOutputSplitTransform
 Transforming lifecycle-livedata-2.6.2.aar (androidx.lifecycle:lifecycle-livedata:2.6.2) with AarToClassTransform
 Transforming lifecycle-livedata-2.6.2.aar (androidx.lifecycle:lifecycle-livedata:2.6.2) with IdentityTransform
 Transforming lifecycle-viewmodel-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel:2.6.2) with AarToClassTransform
+Transforming drawerlayout-1.0.0.aar (androidx.drawerlayout:drawerlayout:1.0.0) with DexingOutputSplitTransform
 Transforming lifecycle-viewmodel-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel:2.6.2) with IdentityTransform
-Transforming appcompat-1.7.0.aar (androidx.appcompat:appcompat:1.7.0) with DexingOutputSplitTransform
 Transforming lifecycle-viewmodel-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel:2.6.2) with AarToClassTransform
 Transforming lifecycle-viewmodel-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel:2.6.2) with IdentityTransform
 Transforming lifecycle-process-2.6.2.aar (androidx.lifecycle:lifecycle-process:2.6.2) with AarToClassTransform
 Transforming lifecycle-process-2.6.2.aar (androidx.lifecycle:lifecycle-process:2.6.2) with IdentityTransform
 Transforming lifecycle-livedata-core-2.6.2.aar (androidx.lifecycle:lifecycle-livedata-core:2.6.2) with AarToClassTransform
 Transforming lifecycle-livedata-core-2.6.2.aar (androidx.lifecycle:lifecycle-livedata-core:2.6.2) with IdentityTransform
+Transforming emoji2-1.3.0.aar (androidx.emoji2:emoji2:1.3.0) with DexingNoClasspathTransform
+Transforming emoji2-views-helper-1.3.0.aar (androidx.emoji2:emoji2-views-helper:1.3.0) with DexingNoClasspathTransform
 Transforming lifecycle-common-2.6.2.jar (androidx.lifecycle:lifecycle-common:2.6.2) with IdentityTransform
 Transforming lifecycle-common-2.6.2.jar (androidx.lifecycle:lifecycle-common:2.6.2) with IdentityTransform
+Transforming emoji2-1.3.0.aar (androidx.emoji2:emoji2:1.3.0) with DexingOutputSplitTransform
 Transforming lifecycle-common-2.6.2.jar (androidx.lifecycle:lifecycle-common:2.6.2) with DexingNoClasspathTransform
 Transforming lifecycle-runtime-2.6.2.aar (androidx.lifecycle:lifecycle-runtime:2.6.2) with AarToClassTransform
 Transforming lifecycle-runtime-2.6.2.aar (androidx.lifecycle:lifecycle-runtime:2.6.2) with IdentityTransform
@@ -1814,15 +1708,14 @@ Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with IdentityTra
 Transforming collection-1.1.0.jar (androidx.collection:collection:1.1.0) with IdentityTransform
 Transforming collection-1.1.0.jar (androidx.collection:collection:1.1.0) with IdentityTransform
 Transforming collection-1.1.0.jar (androidx.collection:collection:1.1.0) with DexingNoClasspathTransform
-Transforming activity-1.7.0.aar (androidx.activity:activity:1.7.0) with DexingNoClasspathTransform
 Transforming concurrent-futures-1.1.0.jar (androidx.concurrent:concurrent-futures:1.1.0) with IdentityTransform
 Transforming concurrent-futures-1.1.0.jar (androidx.concurrent:concurrent-futures:1.1.0) with IdentityTransform
-Transforming drawerlayout-1.0.0.aar (androidx.drawerlayout:drawerlayout:1.0.0) with DexingNoClasspathTransform
 Transforming concurrent-futures-1.1.0.jar (androidx.concurrent:concurrent-futures:1.1.0) with DexingNoClasspathTransform
 Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with AarToClassTransform
 Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with IdentityTransform
 Transforming core-common-2.2.0.jar (androidx.arch.core:core-common:2.2.0) with IdentityTransform
 Transforming core-common-2.2.0.jar (androidx.arch.core:core-common:2.2.0) with IdentityTransform
+Transforming emoji2-views-helper-1.3.0.aar (androidx.emoji2:emoji2-views-helper:1.3.0) with DexingOutputSplitTransform
 Transforming core-common-2.2.0.jar (androidx.arch.core:core-common:2.2.0) with DexingNoClasspathTransform
 Transforming annotation-jvm-1.6.0.jar (androidx.annotation:annotation-jvm:1.6.0) with IdentityTransform
 Transforming annotation-jvm-1.6.0.jar (androidx.annotation:annotation-jvm:1.6.0) with IdentityTransform
@@ -1838,6 +1731,7 @@ Transforming kotlin-stdlib-jdk8-1.8.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jd
 Transforming kotlin-stdlib-jdk8-1.8.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0) with DexingNoClasspathTransform
 Transforming kotlin-stdlib-jdk7-1.8.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0) with IdentityTransform
 Transforming kotlin-stdlib-jdk7-1.8.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0) with IdentityTransform
+Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with DexingNoClasspathTransform
 Transforming kotlin-stdlib-jdk7-1.8.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0) with DexingNoClasspathTransform
 Transforming kotlin-stdlib-1.9.24.jar (org.jetbrains.kotlin:kotlin-stdlib:1.9.24) with IdentityTransform
 Transforming kotlin-stdlib-1.9.24.jar (org.jetbrains.kotlin:kotlin-stdlib:1.9.24) with IdentityTransform
@@ -1848,34 +1742,27 @@ Transforming annotations-13.0.jar (org.jetbrains:annotations:13.0) with DexingNo
 Transforming listenablefuture-1.0.jar (com.google.guava:listenablefuture:1.0) with IdentityTransform
 Transforming listenablefuture-1.0.jar (com.google.guava:listenablefuture:1.0) with IdentityTransform
 Transforming listenablefuture-1.0.jar (com.google.guava:listenablefuture:1.0) with DexingNoClasspathTransform
-Transforming drawerlayout-1.0.0.aar (androidx.drawerlayout:drawerlayout:1.0.0) with DexingOutputSplitTransform
-Transforming activity-1.7.0.aar (androidx.activity:activity:1.7.0) with DexingOutputSplitTransform
-Transforming emoji2-views-helper-1.3.0.aar (androidx.emoji2:emoji2-views-helper:1.3.0) with DexingNoClasspathTransform
-Transforming emoji2-1.3.0.aar (androidx.emoji2:emoji2:1.3.0) with DexingNoClasspathTransform
-Transforming emoji2-views-helper-1.3.0.aar (androidx.emoji2:emoji2-views-helper:1.3.0) with DexingOutputSplitTransform
+Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with DexingNoClasspathTransform
 Transforming vectordrawable-animated-1.1.0.aar (androidx.vectordrawable:vectordrawable-animated:1.1.0) with DexingNoClasspathTransform
-Transforming emoji2-1.3.0.aar (androidx.emoji2:emoji2:1.3.0) with DexingOutputSplitTransform
-Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with DexingNoClasspathTransform
-Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with DexingNoClasspathTransform
+Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with DexingOutputSplitTransform
 Transforming vectordrawable-animated-1.1.0.aar (androidx.vectordrawable:vectordrawable-animated:1.1.0) with DexingOutputSplitTransform
 Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with DexingOutputSplitTransform
-Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with DexingOutputSplitTransform
-Transforming viewpager-1.0.0.aar (androidx.viewpager:viewpager:1.0.0) with DexingNoClasspathTransform
 Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with DexingNoClasspathTransform
-Transforming viewpager-1.0.0.aar (androidx.viewpager:viewpager:1.0.0) with DexingOutputSplitTransform
+Transforming viewpager-1.0.0.aar (androidx.viewpager:viewpager:1.0.0) with DexingNoClasspathTransform
 Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with DexingOutputSplitTransform
-Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with DexingNoClasspathTransform
 Transforming loader-1.0.0.aar (androidx.loader:loader:1.0.0) with DexingNoClasspathTransform
 Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with DexingNoClasspathTransform
 Transforming loader-1.0.0.aar (androidx.loader:loader:1.0.0) with DexingOutputSplitTransform
+Transforming viewpager-1.0.0.aar (androidx.viewpager:viewpager:1.0.0) with DexingOutputSplitTransform
 Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with DexingOutputSplitTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with DexingNoClasspathTransform
 Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with DexingOutputSplitTransform
-Transforming savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) with DexingNoClasspathTransform
 Transforming lifecycle-livedata-2.6.2.aar (androidx.lifecycle:lifecycle-livedata:2.6.2) with DexingNoClasspathTransform
+Transforming lifecycle-livedata-2.6.2.aar (androidx.lifecycle:lifecycle-livedata:2.6.2) with DexingOutputSplitTransform
+Transforming savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) with DexingNoClasspathTransform
+Transforming lifecycle-viewmodel-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel:2.6.2) with DexingNoClasspathTransform
 Transforming lifecycle-viewmodel-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel:2.6.2) with DexingNoClasspathTransform
 Transforming savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) with DexingOutputSplitTransform
-Transforming lifecycle-livedata-2.6.2.aar (androidx.lifecycle:lifecycle-livedata:2.6.2) with DexingOutputSplitTransform
-Transforming lifecycle-viewmodel-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel:2.6.2) with DexingNoClasspathTransform
 Transforming lifecycle-viewmodel-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel:2.6.2) with DexingOutputSplitTransform
 Transforming lifecycle-viewmodel-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel:2.6.2) with DexingOutputSplitTransform
 Transforming lifecycle-process-2.6.2.aar (androidx.lifecycle:lifecycle-process:2.6.2) with DexingNoClasspathTransform
@@ -1884,42 +1771,42 @@ Transforming lifecycle-common-2.6.2.jar (androidx.lifecycle:lifecycle-common:2.6
 Transforming lifecycle-process-2.6.2.aar (androidx.lifecycle:lifecycle-process:2.6.2) with DexingOutputSplitTransform
 Transforming lifecycle-livedata-core-2.6.2.aar (androidx.lifecycle:lifecycle-livedata-core:2.6.2) with DexingOutputSplitTransform
 Transforming lifecycle-viewmodel-savedstate-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2) with DexingNoClasspathTransform
+Transforming lifecycle-viewmodel-savedstate-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2) with DexingOutputSplitTransform
 Transforming lifecycle-runtime-2.6.2.aar (androidx.lifecycle:lifecycle-runtime:2.6.2) with DexingNoClasspathTransform
 Transforming core-ktx-1.13.1.aar (androidx.core:core-ktx:1.13.1) with DexingNoClasspathTransform
 Transforming core-ktx-1.13.1.aar (androidx.core:core-ktx:1.13.1) with DexingOutputSplitTransform
-Transforming lifecycle-runtime-2.6.2.aar (androidx.lifecycle:lifecycle-runtime:2.6.2) with DexingOutputSplitTransform
-Transforming lifecycle-viewmodel-savedstate-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2) with DexingOutputSplitTransform
 Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with DexingNoClasspathTransform
-Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with DexingOutputSplitTransform
-Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with DexingNoClasspathTransform
+Transforming lifecycle-runtime-2.6.2.aar (androidx.lifecycle:lifecycle-runtime:2.6.2) with DexingOutputSplitTransform
 Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) with DexingNoClasspathTransform
-Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with DexingOutputSplitTransform
+Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with DexingOutputSplitTransform
 Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) with DexingOutputSplitTransform
+Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with DexingNoClasspathTransform
+Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with DexingOutputSplitTransform
 Transforming resourceinspection-annotation-1.0.1.jar (androidx.resourceinspection:resourceinspection-annotation:1.0.1) with DexingOutputSplitTransform
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with DexingNoClasspathTransform
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with DexingNoClasspathTransform
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with DexingOutputSplitTransform
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with DexingOutputSplitTransform
 Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with DexingNoClasspathTransform
-Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with DexingNoClasspathTransform
-Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with DexingNoClasspathTransform
 Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with DexingOutputSplitTransform
-Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with DexingOutputSplitTransform
-Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with DexingOutputSplitTransform
 Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with DexingNoClasspathTransform
-Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with DexingOutputSplitTransform
-Transforming collection-1.1.0.jar (androidx.collection:collection:1.1.0) with DexingOutputSplitTransform
 Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with DexingNoClasspathTransform
-Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with DexingNoClasspathTransform
+Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with DexingOutputSplitTransform
 Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with DexingOutputSplitTransform
+Transforming collection-1.1.0.jar (androidx.collection:collection:1.1.0) with DexingOutputSplitTransform
+Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with DexingNoClasspathTransform
 Transforming concurrent-futures-1.1.0.jar (androidx.concurrent:concurrent-futures:1.1.0) with DexingOutputSplitTransform
-Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with DexingOutputSplitTransform
 Transforming core-common-2.2.0.jar (androidx.arch.core:core-common:2.2.0) with DexingOutputSplitTransform
+Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with DexingOutputSplitTransform
 Transforming annotation-jvm-1.6.0.jar (androidx.annotation:annotation-jvm:1.6.0) with DexingOutputSplitTransform
+Transforming kotlinx-coroutines-android-1.6.4.jar (org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4) with DexingOutputSplitTransform
 Transforming kotlinx-coroutines-core-jvm-1.6.4.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4) with DexingOutputSplitTransform
 Transforming kotlin-stdlib-jdk8-1.8.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0) with DexingOutputSplitTransform
-Transforming kotlinx-coroutines-android-1.6.4.jar (org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4) with DexingOutputSplitTransform
 Transforming kotlin-stdlib-jdk7-1.8.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0) with DexingOutputSplitTransform
-Transforming listenablefuture-1.0.jar (com.google.guava:listenablefuture:1.0) with DexingOutputSplitTransform
-Transforming fragment-1.5.4.aar (androidx.fragment:fragment:1.5.4) with DexingNoClasspathTransform
 Transforming kotlin-stdlib-1.9.24.jar (org.jetbrains.kotlin:kotlin-stdlib:1.9.24) with DexingOutputSplitTransform
+Transforming listenablefuture-1.0.jar (com.google.guava:listenablefuture:1.0) with DexingOutputSplitTransform
 Transforming annotations-13.0.jar (org.jetbrains:annotations:13.0) with DexingOutputSplitTransform
+Transforming fragment-1.5.4.aar (androidx.fragment:fragment:1.5.4) with DexingNoClasspathTransform
 Transforming fragment-1.5.4.aar (androidx.fragment:fragment:1.5.4) with DexingOutputSplitTransform
 Caching disabled for task ':app:mergeExtDexDebug' because:
   Build cache is disabled
@@ -2063,228 +1950,612 @@ Using Kotlin/JVM incremental compilation
 i: starting the daemon as: /usr/lib/jvm/temurin-17-jdk-amd64/bin/java -cp /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.9.24/78dab849090e6c5e2eadb6e59a11cdc28fb67a08/kotlin-compiler-embeddable-1.9.24.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.9.24/9928532f12c66ad816a625b3f9984f8368ca6d2b/kotlin-stdlib-1.9.24.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.9.24/96771497da90fbc5af1c90fce148db2595a62502/kotlin-script-runtime-1.9.24.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.6.10/1cbe9c92c12a94eea200d23c2bbaedaf3daf5132/kotlin-reflect-1.6.10.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-embeddable/1.9.24/86685b9c5e8d170925bd9ddbdc263374a6a73281/kotlin-daemon-embeddable-1.9.24.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.intellij.deps/trove4j/1.0.20200330/3afb14d5f9ceb459d724e907a21145e8ff394f02/trove4j-1.0.20200330.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar -Djava.awt.headless=true -D$java.rmi.server.hostname=127.0.0.1 -Xmx2048m -Dkotlin.environment.keepalive -ea --add-exports java.base/sun.nio.ch=ALL-UNNAMED org.jetbrains.kotlin.daemon.KotlinCompileDaemon --daemon-runFilesPath /home/runner/.kotlin/daemon --daemon-autoshutdownIdleSeconds=7200 --daemon-compilerClasspath /home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/1.9.24/78dab849090e6c5e2eadb6e59a11cdc28fb67a08/kotlin-compiler-embeddable-1.9.24.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.9.24/9928532f12c66ad816a625b3f9984f8368ca6d2b/kotlin-stdlib-1.9.24.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/1.9.24/96771497da90fbc5af1c90fce148db2595a62502/kotlin-script-runtime-1.9.24.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.6.10/1cbe9c92c12a94eea200d23c2bbaedaf3daf5132/kotlin-reflect-1.6.10.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-embeddable/1.9.24/86685b9c5e8d170925bd9ddbdc263374a6a73281/kotlin-daemon-embeddable-1.9.24.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains.intellij.deps/trove4j/1.0.20200330/3afb14d5f9ceb459d724e907a21145e8ff394f02/trove4j-1.0.20200330.jar:/home/runner/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar
 i: Received the message signalling that the daemon is ready
 i: new daemon started, trying to find it
-i: found daemon on port 17797 (65 ms old), trying to connect
+i: found daemon on port 17784 (49 ms old), trying to connect
 i: connected to the daemon
 Options for KOTLIN DAEMON: IncrementalCompilationOptions(super=CompilationOptions(compilerMode=INCREMENTAL_COMPILER, targetPlatform=JVM, reportCategories=[0, 3], reportSeverity=2, requestedCompilationResults=[0], kotlinScriptExtensions=[]), areFileChangesKnown=false, modifiedFiles=null, deletedFiles=null, classpathChanges=NotAvailableForNonIncrementalRun, workingDir=/home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/kotlin/compileDebugKotlin/cacheable, multiModuleICSettings=MultiModuleICSettings(buildHistoryFile=/home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/kotlin/compileDebugKotlin/local-state/build-history.bin, useModuleDetection=true), usePreciseJavaTracking=true, outputFiles=[/home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/tmp/kotlin-classes/debug, /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/kotlin/compileDebugKotlin/cacheable, /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/kotlin/compileDebugKotlin/local-state])
-e: file:///home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/src/main/java/com/zen/overlay/OverlayService.kt:11:19 Unresolved reference: Choreographer
-e: file:///home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/src/main/java/com/zen/overlay/OverlayService.kt:38:30 Unresolved reference: Choreographer
-e: file:///home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/src/main/java/com/zen/overlay/OverlayService.kt:203:32 Unresolved reference: Choreographer
-e: file:///home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/src/main/java/com/zen/overlay/OverlayService.kt:204:13 'doFrame' overrides nothing
-e: file:///home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/src/main/java/com/zen/overlay/OverlayService.kt:211:17 Unresolved reference: Choreographer
-e: file:///home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/src/main/java/com/zen/overlay/OverlayService.kt:214:9 Unresolved reference: Choreographer
-e: file:///home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/src/main/java/com/zen/overlay/OverlayService.kt:218:28 Unresolved reference: Choreographer
-e: file:///home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/src/main/java/com/zen/overlay/OverlayService.kt:218:76 Unresolved reference: it
+Resolve mutations for :app:compileDebugJavaWithJavac (Thread[Execution worker Thread 2,5,main]) started.
+:app:compileDebugJavaWithJavac (Thread[Execution worker Thread 2,5,main]) started.
 
-> Task :app:compileDebugKotlin FAILED
+> Task :app:compileDebugJavaWithJavac NO-SOURCE
+Skipping task ':app:compileDebugJavaWithJavac' as it has no source files and no previous output files.
+Resolve mutations for :app:dexBuilderDebug (Thread[Execution worker Thread 2,5,main]) started.
+:app:dexBuilderDebug (Thread[Execution worker Thread 2,5,main]) started.
+
+> Task :app:dexBuilderDebug
+Caching disabled for task ':app:dexBuilderDebug' because:
+  Build cache is disabled
+Task ':app:dexBuilderDebug' is not up-to-date because:
+  No history is available.
+The input changes require a full rebuild for incremental task ':app:dexBuilderDebug'.
+Dex builder is incremental : false 
+Processing input /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/tmp/kotlin-classes/debug
+Dexing /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/tmp/kotlin-classes/debug
+Processing input /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/processDebugResources/R.jar
+Dexing /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/processDebugResources/R.jar
+Dexing '/home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/processDebugResources/R.jar' to '/home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/4c183f8071e0bcbdf2ebd8e12e14ae9f532241d1ca9f7209e8dd1a2318ce64ec_0.jar'
+Dexing '/home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/tmp/kotlin-classes/debug' to '/home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out'
+Dexing '/home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/tmp/kotlin-classes/debug' to '/home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out'
+Dexing '/home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/processDebugResources/R.jar' to '/home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/4c183f8071e0bcbdf2ebd8e12e14ae9f532241d1ca9f7209e8dd1a2318ce64ec_1.jar'
+Done with all dex archive conversions
+Resolve mutations for :app:mergeDebugGlobalSynthetics (Thread[Execution worker Thread 2,5,main]) started.
+:app:mergeDebugGlobalSynthetics (Thread[Execution worker Thread 2,5,main]) started.
+Resolve mutations for :app:processDebugJavaRes (Thread[Execution worker Thread 3,5,main]) started.
+:app:processDebugJavaRes (Thread[Execution worker,5,main]) started.
+
+> Task :app:mergeDebugGlobalSynthetics
+Transforming appcompat-resources-1.7.0.aar (androidx.appcompat:appcompat-resources:1.7.0) with AarToClassTransform
+Transforming appcompat-resources-1.7.0.aar (androidx.appcompat:appcompat-resources:1.7.0) with IdentityTransform
+Transforming appcompat-resources-1.7.0.aar (androidx.appcompat:appcompat-resources:1.7.0) with DexingNoClasspathTransform
+Transforming appcompat-resources-1.7.0.aar (androidx.appcompat:appcompat-resources:1.7.0) with DexingOutputSplitTransform
+Transforming appcompat-1.7.0.aar (androidx.appcompat:appcompat:1.7.0) with AarToClassTransform
+Transforming appcompat-1.7.0.aar (androidx.appcompat:appcompat:1.7.0) with IdentityTransform
+Transforming appcompat-1.7.0.aar (androidx.appcompat:appcompat:1.7.0) with DexingNoClasspathTransform
+Transforming appcompat-1.7.0.aar (androidx.appcompat:appcompat:1.7.0) with DexingOutputSplitTransform
+Transforming fragment-1.5.4.aar (androidx.fragment:fragment:1.5.4) with AarToClassTransform
+Transforming fragment-1.5.4.aar (androidx.fragment:fragment:1.5.4) with IdentityTransform
+Transforming fragment-1.5.4.aar (androidx.fragment:fragment:1.5.4) with DexingNoClasspathTransform
+Transforming fragment-1.5.4.aar (androidx.fragment:fragment:1.5.4) with DexingOutputSplitTransform
+Transforming activity-1.7.0.aar (androidx.activity:activity:1.7.0) with AarToClassTransform
+Transforming activity-1.7.0.aar (androidx.activity:activity:1.7.0) with IdentityTransform
+Transforming activity-1.7.0.aar (androidx.activity:activity:1.7.0) with DexingNoClasspathTransform
+Transforming activity-1.7.0.aar (androidx.activity:activity:1.7.0) with DexingOutputSplitTransform
+Transforming drawerlayout-1.0.0.aar (androidx.drawerlayout:drawerlayout:1.0.0) with AarToClassTransform
+Transforming drawerlayout-1.0.0.aar (androidx.drawerlayout:drawerlayout:1.0.0) with IdentityTransform
+Transforming drawerlayout-1.0.0.aar (androidx.drawerlayout:drawerlayout:1.0.0) with DexingNoClasspathTransform
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/3bff6baada5f31babdfb09f0992c45b1/transformed/fragment-1.5.4-runtime because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming drawerlayout-1.0.0.aar (androidx.drawerlayout:drawerlayout:1.0.0) with DexingOutputSplitTransform
+Transforming emoji2-views-helper-1.3.0.aar (androidx.emoji2:emoji2-views-helper:1.3.0) with AarToClassTransform
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/823e40c7060549337902a167cceef884/transformed/appcompat-1.7.0-runtime because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming emoji2-views-helper-1.3.0.aar (androidx.emoji2:emoji2-views-helper:1.3.0) with IdentityTransform
+Transforming emoji2-views-helper-1.3.0.aar (androidx.emoji2:emoji2-views-helper:1.3.0) with DexingNoClasspathTransform
+Transforming emoji2-views-helper-1.3.0.aar (androidx.emoji2:emoji2-views-helper:1.3.0) with DexingOutputSplitTransform
+Transforming emoji2-1.3.0.aar (androidx.emoji2:emoji2:1.3.0) with AarToClassTransform
+Transforming emoji2-1.3.0.aar (androidx.emoji2:emoji2:1.3.0) with IdentityTransform
+Transforming emoji2-1.3.0.aar (androidx.emoji2:emoji2:1.3.0) with DexingNoClasspathTransform
+Transforming emoji2-1.3.0.aar (androidx.emoji2:emoji2:1.3.0) with DexingOutputSplitTransform
+Transforming vectordrawable-animated-1.1.0.aar (androidx.vectordrawable:vectordrawable-animated:1.1.0) with AarToClassTransform
+Transforming vectordrawable-animated-1.1.0.aar (androidx.vectordrawable:vectordrawable-animated:1.1.0) with IdentityTransform
+Transforming vectordrawable-animated-1.1.0.aar (androidx.vectordrawable:vectordrawable-animated:1.1.0) with DexingNoClasspathTransform
+Transforming vectordrawable-animated-1.1.0.aar (androidx.vectordrawable:vectordrawable-animated:1.1.0) with DexingOutputSplitTransform
+Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with AarToClassTransform
+Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with IdentityTransform
+Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with DexingNoClasspathTransform
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/1d02158f5eaecdad095bb02dd09940a8/transformed/appcompat-resources-1.7.0-runtime because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with DexingOutputSplitTransform
+Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with AarToClassTransform
+Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with IdentityTransform
+Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with DexingNoClasspathTransform
+Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with DexingOutputSplitTransform
+Transforming viewpager-1.0.0.aar (androidx.viewpager:viewpager:1.0.0) with AarToClassTransform
+Transforming viewpager-1.0.0.aar (androidx.viewpager:viewpager:1.0.0) with IdentityTransform
+Transforming viewpager-1.0.0.aar (androidx.viewpager:viewpager:1.0.0) with DexingNoClasspathTransform
+Transforming viewpager-1.0.0.aar (androidx.viewpager:viewpager:1.0.0) with DexingOutputSplitTransform
+Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with AarToClassTransform
+Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with IdentityTransform
+Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with DexingNoClasspathTransform
+Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with DexingOutputSplitTransform
+Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with AarToClassTransform
+Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with IdentityTransform
+Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with DexingNoClasspathTransform
+Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with DexingOutputSplitTransform
+Transforming loader-1.0.0.aar (androidx.loader:loader:1.0.0) with AarToClassTransform
+Transforming loader-1.0.0.aar (androidx.loader:loader:1.0.0) with IdentityTransform
+Transforming loader-1.0.0.aar (androidx.loader:loader:1.0.0) with DexingNoClasspathTransform
+Transforming loader-1.0.0.aar (androidx.loader:loader:1.0.0) with DexingOutputSplitTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarToClassTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with IdentityTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with DexingNoClasspathTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with DexingOutputSplitTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarToClassTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with IdentityTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with DexingNoClasspathTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with DexingOutputSplitTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarToClassTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with IdentityTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with DexingNoClasspathTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with DexingOutputSplitTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarToClassTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with IdentityTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with DexingNoClasspathTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with DexingOutputSplitTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarToClassTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with IdentityTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with DexingNoClasspathTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with DexingOutputSplitTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarToClassTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with IdentityTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with DexingNoClasspathTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with DexingOutputSplitTransform
+Transforming savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) with AarToClassTransform
+Transforming savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) with IdentityTransform
+Transforming savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) with DexingNoClasspathTransform
+Transforming savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) with DexingOutputSplitTransform
+Transforming lifecycle-livedata-2.6.2.aar (androidx.lifecycle:lifecycle-livedata:2.6.2) with AarToClassTransform
+Transforming lifecycle-livedata-2.6.2.aar (androidx.lifecycle:lifecycle-livedata:2.6.2) with IdentityTransform
+Transforming lifecycle-livedata-2.6.2.aar (androidx.lifecycle:lifecycle-livedata:2.6.2) with DexingNoClasspathTransform
+Transforming lifecycle-livedata-2.6.2.aar (androidx.lifecycle:lifecycle-livedata:2.6.2) with DexingOutputSplitTransform
+Transforming lifecycle-viewmodel-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel:2.6.2) with AarToClassTransform
+Transforming lifecycle-viewmodel-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel:2.6.2) with IdentityTransform
+Transforming lifecycle-viewmodel-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel:2.6.2) with DexingNoClasspathTransform
+Transforming lifecycle-viewmodel-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel:2.6.2) with DexingOutputSplitTransform
+Transforming lifecycle-viewmodel-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel:2.6.2) with AarToClassTransform
+Transforming lifecycle-viewmodel-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel:2.6.2) with IdentityTransform
+Transforming lifecycle-viewmodel-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel:2.6.2) with DexingNoClasspathTransform
+Transforming lifecycle-viewmodel-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel:2.6.2) with DexingOutputSplitTransform
+Transforming lifecycle-process-2.6.2.aar (androidx.lifecycle:lifecycle-process:2.6.2) with AarToClassTransform
+Transforming lifecycle-process-2.6.2.aar (androidx.lifecycle:lifecycle-process:2.6.2) with IdentityTransform
+Transforming lifecycle-process-2.6.2.aar (androidx.lifecycle:lifecycle-process:2.6.2) with DexingNoClasspathTransform
+Transforming lifecycle-process-2.6.2.aar (androidx.lifecycle:lifecycle-process:2.6.2) with DexingOutputSplitTransform
+Transforming lifecycle-livedata-core-2.6.2.aar (androidx.lifecycle:lifecycle-livedata-core:2.6.2) with AarToClassTransform
+Transforming lifecycle-livedata-core-2.6.2.aar (androidx.lifecycle:lifecycle-livedata-core:2.6.2) with IdentityTransform
+Transforming lifecycle-livedata-core-2.6.2.aar (androidx.lifecycle:lifecycle-livedata-core:2.6.2) with DexingNoClasspathTransform
+Transforming lifecycle-livedata-core-2.6.2.aar (androidx.lifecycle:lifecycle-livedata-core:2.6.2) with DexingOutputSplitTransform
+Transforming lifecycle-common-2.6.2.jar (androidx.lifecycle:lifecycle-common:2.6.2) with IdentityTransform
+Transforming lifecycle-common-2.6.2.jar (androidx.lifecycle:lifecycle-common:2.6.2) with IdentityTransform
+Transforming lifecycle-common-2.6.2.jar (androidx.lifecycle:lifecycle-common:2.6.2) with DexingNoClasspathTransform
+Transforming lifecycle-common-2.6.2.jar (androidx.lifecycle:lifecycle-common:2.6.2) with DexingOutputSplitTransform
+Transforming lifecycle-runtime-2.6.2.aar (androidx.lifecycle:lifecycle-runtime:2.6.2) with AarToClassTransform
+Transforming lifecycle-runtime-2.6.2.aar (androidx.lifecycle:lifecycle-runtime:2.6.2) with IdentityTransform
+Transforming lifecycle-runtime-2.6.2.aar (androidx.lifecycle:lifecycle-runtime:2.6.2) with DexingNoClasspathTransform
+Transforming lifecycle-runtime-2.6.2.aar (androidx.lifecycle:lifecycle-runtime:2.6.2) with DexingOutputSplitTransform
+Transforming lifecycle-viewmodel-savedstate-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2) with AarToClassTransform
+Transforming lifecycle-viewmodel-savedstate-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2) with IdentityTransform
+Transforming lifecycle-viewmodel-savedstate-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2) with DexingNoClasspathTransform
+Transforming lifecycle-viewmodel-savedstate-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2) with DexingOutputSplitTransform
+Transforming core-ktx-1.13.1.aar (androidx.core:core-ktx:1.13.1) with AarToClassTransform
+Transforming core-ktx-1.13.1.aar (androidx.core:core-ktx:1.13.1) with IdentityTransform
+Transforming core-ktx-1.13.1.aar (androidx.core:core-ktx:1.13.1) with DexingNoClasspathTransform
+Transforming core-ktx-1.13.1.aar (androidx.core:core-ktx:1.13.1) with DexingOutputSplitTransform
+Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with AarToClassTransform
+Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with IdentityTransform
+Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with DexingNoClasspathTransform
+Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with DexingOutputSplitTransform
+Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) with AarToClassTransform
+Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) with IdentityTransform
+Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) with DexingNoClasspathTransform
+Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) with DexingOutputSplitTransform
+Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with AarToClassTransform
+Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with IdentityTransform
+Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with DexingNoClasspathTransform
+Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with DexingOutputSplitTransform
+Transforming resourceinspection-annotation-1.0.1.jar (androidx.resourceinspection:resourceinspection-annotation:1.0.1) with IdentityTransform
+Transforming resourceinspection-annotation-1.0.1.jar (androidx.resourceinspection:resourceinspection-annotation:1.0.1) with IdentityTransform
+Transforming resourceinspection-annotation-1.0.1.jar (androidx.resourceinspection:resourceinspection-annotation:1.0.1) with DexingNoClasspathTransform
+Transforming resourceinspection-annotation-1.0.1.jar (androidx.resourceinspection:resourceinspection-annotation:1.0.1) with DexingOutputSplitTransform
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with AarToClassTransform
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with IdentityTransform
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with DexingNoClasspathTransform
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with DexingOutputSplitTransform
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with AarToClassTransform
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with IdentityTransform
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with DexingNoClasspathTransform
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with DexingOutputSplitTransform
+Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with AarToClassTransform
+Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with IdentityTransform
+Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with DexingNoClasspathTransform
+Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with DexingOutputSplitTransform
+Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with AarToClassTransform
+Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with IdentityTransform
+Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with DexingNoClasspathTransform
+Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with DexingOutputSplitTransform
+Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with AarToClassTransform
+Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with IdentityTransform
+Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with DexingNoClasspathTransform
+Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with DexingOutputSplitTransform
+Transforming collection-1.1.0.jar (androidx.collection:collection:1.1.0) with IdentityTransform
+Transforming collection-1.1.0.jar (androidx.collection:collection:1.1.0) with IdentityTransform
+Transforming collection-1.1.0.jar (androidx.collection:collection:1.1.0) with DexingNoClasspathTransform
+Transforming collection-1.1.0.jar (androidx.collection:collection:1.1.0) with DexingOutputSplitTransform
+Transforming concurrent-futures-1.1.0.jar (androidx.concurrent:concurrent-futures:1.1.0) with IdentityTransform
+Transforming concurrent-futures-1.1.0.jar (androidx.concurrent:concurrent-futures:1.1.0) with IdentityTransform
+Transforming concurrent-futures-1.1.0.jar (androidx.concurrent:concurrent-futures:1.1.0) with DexingNoClasspathTransform
+Transforming concurrent-futures-1.1.0.jar (androidx.concurrent:concurrent-futures:1.1.0) with DexingOutputSplitTransform
+Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with AarToClassTransform
+Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with IdentityTransform
+Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with DexingNoClasspathTransform
+Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with DexingOutputSplitTransform
+Transforming core-common-2.2.0.jar (androidx.arch.core:core-common:2.2.0) with IdentityTransform
+Transforming core-common-2.2.0.jar (androidx.arch.core:core-common:2.2.0) with IdentityTransform
+Transforming core-common-2.2.0.jar (androidx.arch.core:core-common:2.2.0) with DexingNoClasspathTransform
+Transforming core-common-2.2.0.jar (androidx.arch.core:core-common:2.2.0) with DexingOutputSplitTransform
+Transforming annotation-jvm-1.6.0.jar (androidx.annotation:annotation-jvm:1.6.0) with IdentityTransform
+Transforming annotation-jvm-1.6.0.jar (androidx.annotation:annotation-jvm:1.6.0) with IdentityTransform
+Transforming annotation-jvm-1.6.0.jar (androidx.annotation:annotation-jvm:1.6.0) with DexingNoClasspathTransform
+Transforming annotation-jvm-1.6.0.jar (androidx.annotation:annotation-jvm:1.6.0) with DexingOutputSplitTransform
+Transforming kotlinx-coroutines-core-jvm-1.6.4.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4) with IdentityTransform
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/fd2c92372dc1dfb020db80c78ed9fb51/transformed/activity-1.7.0-runtime because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming kotlinx-coroutines-core-jvm-1.6.4.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4) with IdentityTransform
+Transforming kotlinx-coroutines-core-jvm-1.6.4.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4) with DexingNoClasspathTransform
+Transforming kotlinx-coroutines-core-jvm-1.6.4.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4) with DexingOutputSplitTransform
+Transforming kotlinx-coroutines-android-1.6.4.jar (org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4) with IdentityTransform
+Transforming kotlinx-coroutines-android-1.6.4.jar (org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4) with IdentityTransform
+Transforming kotlinx-coroutines-android-1.6.4.jar (org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4) with DexingNoClasspathTransform
+Transforming kotlinx-coroutines-android-1.6.4.jar (org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4) with DexingOutputSplitTransform
+Transforming kotlin-stdlib-jdk8-1.8.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0) with IdentityTransform
+Transforming kotlin-stdlib-jdk8-1.8.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0) with IdentityTransform
+Transforming kotlin-stdlib-jdk8-1.8.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0) with DexingNoClasspathTransform
+Transforming kotlin-stdlib-jdk8-1.8.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0) with DexingOutputSplitTransform
+Transforming kotlin-stdlib-jdk7-1.8.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0) with IdentityTransform
+Transforming kotlin-stdlib-jdk7-1.8.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0) with IdentityTransform
+Transforming kotlin-stdlib-jdk7-1.8.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0) with DexingNoClasspathTransform
+Transforming kotlin-stdlib-jdk7-1.8.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0) with DexingOutputSplitTransform
+Transforming kotlin-stdlib-1.9.24.jar (org.jetbrains.kotlin:kotlin-stdlib:1.9.24) with IdentityTransform
+Transforming kotlin-stdlib-1.9.24.jar (org.jetbrains.kotlin:kotlin-stdlib:1.9.24) with IdentityTransform
+Transforming kotlin-stdlib-1.9.24.jar (org.jetbrains.kotlin:kotlin-stdlib:1.9.24) with DexingNoClasspathTransform
+Transforming kotlin-stdlib-1.9.24.jar (org.jetbrains.kotlin:kotlin-stdlib:1.9.24) with DexingOutputSplitTransform
+Transforming annotations-13.0.jar (org.jetbrains:annotations:13.0) with IdentityTransform
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/2888413bf62b4b4f690b59c12a77ddff/transformed/drawerlayout-1.0.0-runtime because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/df38df5f7f28f9c48aa537b4ad3df87f/transformed/emoji2-views-helper-1.3.0-runtime because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming annotations-13.0.jar (org.jetbrains:annotations:13.0) with IdentityTransform
+Transforming annotations-13.0.jar (org.jetbrains:annotations:13.0) with DexingNoClasspathTransform
+Transforming annotations-13.0.jar (org.jetbrains:annotations:13.0) with DexingOutputSplitTransform
+Transforming listenablefuture-1.0.jar (com.google.guava:listenablefuture:1.0) with IdentityTransform
+Transforming listenablefuture-1.0.jar (com.google.guava:listenablefuture:1.0) with IdentityTransform
+Transforming listenablefuture-1.0.jar (com.google.guava:listenablefuture:1.0) with DexingNoClasspathTransform
+Transforming listenablefuture-1.0.jar (com.google.guava:listenablefuture:1.0) with DexingOutputSplitTransform
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/5275507fe84b69d90e67a65ae6a4a264/transformed/emoji2-1.3.0-runtime because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/27d8f7ee09c3e1673acbf1aa2ed592d0/transformed/vectordrawable-1.1.0-runtime because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/c54d863f2df5f7948ef46e38c3cbd48d/transformed/vectordrawable-animated-1.1.0-runtime because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/5e7c76c8f7dc6b9ab8b0158b58f3c1d9/transformed/viewpager-1.0.0-runtime because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/d6a1f4b118ebe514a77b0452fc808ba6/transformed/customview-1.0.0-runtime because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/537323f6c9c59fb73b2112015f804aaf/transformed/loader-1.0.0-runtime because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/ffb1fe900ca9832d0ccf57c8579b6d2d/transformed/core-1.13.1-runtime because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/e10910ed5b2809962c6cd4b88b1cf64b/transformed/savedstate-1.2.1-runtime because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/dbe5f063851cc22fda2ee6411f7186c0/transformed/lifecycle-livedata-2.6.2-runtime because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/512f6bac05695b20f42a37961c39276d/transformed/lifecycle-viewmodel-2.6.2-runtime because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/7603ef8c42913e40b7420a8953809a96/transformed/lifecycle-process-2.6.2-runtime because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/494fc4799f7d3143e00d0d031007571b/transformed/lifecycle-livedata-core-2.6.2-runtime because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/aad7c940400c1e9a476a531b5c3c1813/transformed/lifecycle-runtime-2.6.2-runtime because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/e2cb4fc2f46a80aa20f7ea742b902caa/transformed/lifecycle-common-2.6.2 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/1dbf2fb15a7648b98011ed3bb073b654/transformed/lifecycle-viewmodel-savedstate-2.6.2-runtime because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/7f83fda008de50e7730fffe2a09d4a34/transformed/core-ktx-1.13.1-runtime because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/bc04066a5bb519bcad5a7658870c90a6/transformed/annotation-experimental-1.4.0-runtime because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/5aa7a36ac05c8dcb1c559bcbc304f1bd/transformed/cursoradapter-1.0.0-runtime because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/54aa81a4b7f541a0fda6d286c92ad2ef/transformed/profileinstaller-1.3.1-runtime because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/f93a3d193d8efa9f04a5d3eef91103da/transformed/resourceinspection-annotation-1.0.1 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/041d60c20391ecb54eb2edd4910fc7a3/transformed/interpolator-1.0.0-runtime because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/8cc7cdd1d30a538e50ff4ab547de06d2/transformed/versionedparcelable-1.1.1-runtime because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/8c99394fc40bd580be029d35c18c3e67/transformed/startup-runtime-1.1.1-runtime because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/276dccce02097e2c669db700eb33d1fa/transformed/tracing-1.0.0-runtime because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/a5b1c18412bf51dc439b567b79b7a4d5/transformed/collection-1.1.0 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/b09e5706f6a63853f772e30509e18ab1/transformed/core-runtime-2.2.0-runtime because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/b66cf44e221ba5f8b2115e93195a5051/transformed/concurrent-futures-1.1.0 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/ba33639b6fe1f530eb8951d83c338f2f/transformed/core-common-2.2.0 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/1a29a62832d90a52bba3d4f1d543a84c/transformed/annotation-jvm-1.6.0 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/dbfe84d60af4d76e7c60aecbb80fbd7e/transformed/kotlinx-coroutines-android-1.6.4 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/c7106ac4ae55975d6210bb2136d272f7/transformed/kotlinx-coroutines-core-jvm-1.6.4 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/7482777498a187256972ca80e76694e4/transformed/kotlin-stdlib-jdk8-1.8.0 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/ffe387218a7c31383e58fca61e705b66/transformed/kotlin-stdlib-jdk7-1.8.0 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/b6b08c44d049595c88fc4600b451b2a1/transformed/kotlin-stdlib-1.9.24 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/95a99c5679d79632c79c520270d25196/transformed/annotations-13.0 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for DexingOutputSplitTransform: /home/runner/.gradle/caches/transforms-4/919283d1c66c6811df181172f9d6b436/transformed/listenablefuture-1.0 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for task ':app:mergeDebugGlobalSynthetics' because:
+  Build cache is disabled
+Task ':app:mergeDebugGlobalSynthetics' is not up-to-date because:
+  No history is available.
+
+> Task :app:processDebugJavaRes
+file or directory '/home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/src/main/resources', not found
+file or directory '/home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/src/debug/resources', not found
+file or directory '/home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/src/main/resources', not found
+file or directory '/home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/src/debug/resources', not found
+Caching disabled for task ':app:processDebugJavaRes' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:processDebugJavaRes' is not up-to-date because:
+  No history is available.
+file or directory '/home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/src/main/resources', not found
+file or directory '/home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/src/debug/resources', not found
+file or directory '/home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/src/main/resources', not found
+file or directory '/home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/src/debug/resources', not found
+Resolve mutations for :app:mergeDebugJavaResource (Thread[Execution worker Thread 2,5,main]) started.
+:app:mergeDebugJavaResource (Thread[Execution worker Thread 2,5,main]) started.
+Resolve mutations for :app:mergeProjectDexDebug (Thread[Execution worker,5,main]) started.
+:app:mergeProjectDexDebug (Thread[Execution worker,5,main]) started.
+
+> Task :app:mergeProjectDexDebug
+Caching disabled for task ':app:mergeProjectDexDebug' because:
+  Build cache is disabled
+Task ':app:mergeProjectDexDebug' is not up-to-date because:
+  No history is available.
+The input changes require a full rebuild for incremental task ':app:mergeProjectDexDebug'.
+Merging to '/home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/dex/debug/mergeProjectDexDebug/0' with D8 from all or a subset of dex files in /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/4c183f8071e0bcbdf2ebd8e12e14ae9f532241d1ca9f7209e8dd1a2318ce64ec_0.jar, /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/4c183f8071e0bcbdf2ebd8e12e14ae9f532241d1ca9f7209e8dd1a2318ce64ec_1.jar, and from all global synthetics files in 
+Merging to '/home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/dex/debug/mergeProjectDexDebug/15' with D8 from all or a subset of dex files in /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out, /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out, /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out, /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out, /home/runner/work/Zen-Client-Launcher/Zen-Client-Launcher/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out, and from all global synthetics files in 
+
+> Task :app:mergeDebugJavaResource
+Transforming appcompat-resources-1.7.0.aar (androidx.appcompat:appcompat-resources:1.7.0) with ExtractAarTransform
+Transforming appcompat-resources-1.7.0.aar (androidx.appcompat:appcompat-resources:1.7.0) with AarTransform
+Transforming appcompat-1.7.0.aar (androidx.appcompat:appcompat:1.7.0) with ExtractAarTransform
+Transforming appcompat-1.7.0.aar (androidx.appcompat:appcompat:1.7.0) with AarTransform
+Transforming fragment-1.5.4.aar (androidx.fragment:fragment:1.5.4) with ExtractAarTransform
+Transforming fragment-1.5.4.aar (androidx.fragment:fragment:1.5.4) with AarTransform
+Transforming activity-1.7.0.aar (androidx.activity:activity:1.7.0) with ExtractAarTransform
+Transforming activity-1.7.0.aar (androidx.activity:activity:1.7.0) with AarTransform
+Transforming drawerlayout-1.0.0.aar (androidx.drawerlayout:drawerlayout:1.0.0) with ExtractAarTransform
+Transforming drawerlayout-1.0.0.aar (androidx.drawerlayout:drawerlayout:1.0.0) with AarTransform
+Transforming emoji2-views-helper-1.3.0.aar (androidx.emoji2:emoji2-views-helper:1.3.0) with ExtractAarTransform
+Transforming emoji2-views-helper-1.3.0.aar (androidx.emoji2:emoji2-views-helper:1.3.0) with AarTransform
+Transforming emoji2-1.3.0.aar (androidx.emoji2:emoji2:1.3.0) with ExtractAarTransform
+Transforming emoji2-1.3.0.aar (androidx.emoji2:emoji2:1.3.0) with AarTransform
+Transforming vectordrawable-animated-1.1.0.aar (androidx.vectordrawable:vectordrawable-animated:1.1.0) with ExtractAarTransform
+Transforming vectordrawable-animated-1.1.0.aar (androidx.vectordrawable:vectordrawable-animated:1.1.0) with AarTransform
+Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with ExtractAarTransform
+Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with AarTransform
+Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with ExtractAarTransform
+Transforming vectordrawable-1.1.0.aar (androidx.vectordrawable:vectordrawable:1.1.0) with AarTransform
+Transforming viewpager-1.0.0.aar (androidx.viewpager:viewpager:1.0.0) with ExtractAarTransform
+Transforming viewpager-1.0.0.aar (androidx.viewpager:viewpager:1.0.0) with AarTransform
+Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with ExtractAarTransform
+Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with AarTransform
+Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with ExtractAarTransform
+Transforming customview-1.0.0.aar (androidx.customview:customview:1.0.0) with AarTransform
+Transforming loader-1.0.0.aar (androidx.loader:loader:1.0.0) with ExtractAarTransform
+Transforming loader-1.0.0.aar (androidx.loader:loader:1.0.0) with AarTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with ExtractAarTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with ExtractAarTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with ExtractAarTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with ExtractAarTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with ExtractAarTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with ExtractAarTransform
+Transforming core-1.13.1.aar (androidx.core:core:1.13.1) with AarTransform
+Transforming savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) with ExtractAarTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/e97b8fec522e0237fe171c43b96f412b/transformed/appcompat-resources-1.7.0 because:
+  Build cache is disabled
+  Caching not enabled.
+Transforming savedstate-1.2.1.aar (androidx.savedstate:savedstate:1.2.1) with AarTransform
+Transforming lifecycle-livedata-2.6.2.aar (androidx.lifecycle:lifecycle-livedata:2.6.2) with ExtractAarTransform
+Transforming lifecycle-livedata-2.6.2.aar (androidx.lifecycle:lifecycle-livedata:2.6.2) with AarTransform
+Transforming lifecycle-viewmodel-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel:2.6.2) with ExtractAarTransform
+Transforming lifecycle-viewmodel-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel:2.6.2) with AarTransform
+Transforming lifecycle-viewmodel-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel:2.6.2) with ExtractAarTransform
+Transforming lifecycle-viewmodel-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel:2.6.2) with AarTransform
+Transforming lifecycle-process-2.6.2.aar (androidx.lifecycle:lifecycle-process:2.6.2) with ExtractAarTransform
+Transforming lifecycle-process-2.6.2.aar (androidx.lifecycle:lifecycle-process:2.6.2) with AarTransform
+Transforming lifecycle-livedata-core-2.6.2.aar (androidx.lifecycle:lifecycle-livedata-core:2.6.2) with ExtractAarTransform
+Transforming lifecycle-livedata-core-2.6.2.aar (androidx.lifecycle:lifecycle-livedata-core:2.6.2) with AarTransform
+Transforming lifecycle-common-2.6.2.jar (androidx.lifecycle:lifecycle-common:2.6.2) with IdentityTransform
+Transforming lifecycle-runtime-2.6.2.aar (androidx.lifecycle:lifecycle-runtime:2.6.2) with ExtractAarTransform
+Transforming lifecycle-runtime-2.6.2.aar (androidx.lifecycle:lifecycle-runtime:2.6.2) with AarTransform
+Transforming lifecycle-viewmodel-savedstate-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2) with ExtractAarTransform
+Transforming lifecycle-viewmodel-savedstate-2.6.2.aar (androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2) with AarTransform
+Transforming core-ktx-1.13.1.aar (androidx.core:core-ktx:1.13.1) with ExtractAarTransform
+Transforming core-ktx-1.13.1.aar (androidx.core:core-ktx:1.13.1) with AarTransform
+Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with ExtractAarTransform
+Transforming annotation-experimental-1.4.0.aar (androidx.annotation:annotation-experimental:1.4.0) with AarTransform
+Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) with ExtractAarTransform
+Transforming cursoradapter-1.0.0.aar (androidx.cursoradapter:cursoradapter:1.0.0) with AarTransform
+Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with ExtractAarTransform
+Transforming profileinstaller-1.3.1.aar (androidx.profileinstaller:profileinstaller:1.3.1) with AarTransform
+Transforming resourceinspection-annotation-1.0.1.jar (androidx.resourceinspection:resourceinspection-annotation:1.0.1) with IdentityTransform
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with ExtractAarTransform
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with AarTransform
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with ExtractAarTransform
+Transforming interpolator-1.0.0.aar (androidx.interpolator:interpolator:1.0.0) with AarTransform
+Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with ExtractAarTransform
+Transforming versionedparcelable-1.1.1.aar (androidx.versionedparcelable:versionedparcelable:1.1.1) with AarTransform
+Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with ExtractAarTransform
+Transforming startup-runtime-1.1.1.aar (androidx.startup:startup-runtime:1.1.1) with AarTransform
+Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with ExtractAarTransform
+Transforming tracing-1.0.0.aar (androidx.tracing:tracing:1.0.0) with AarTransform
+Transforming collection-1.1.0.jar (androidx.collection:collection:1.1.0) with IdentityTransform
+Transforming concurrent-futures-1.1.0.jar (androidx.concurrent:concurrent-futures:1.1.0) with IdentityTransform
+Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with ExtractAarTransform
+Transforming core-runtime-2.2.0.aar (androidx.arch.core:core-runtime:2.2.0) with AarTransform
+Transforming core-common-2.2.0.jar (androidx.arch.core:core-common:2.2.0) with IdentityTransform
+Transforming annotation-jvm-1.6.0.jar (androidx.annotation:annotation-jvm:1.6.0) with IdentityTransform
+Transforming kotlinx-coroutines-core-jvm-1.6.4.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4) with IdentityTransform
+Transforming kotlinx-coroutines-android-1.6.4.jar (org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4) with IdentityTransform
+Transforming kotlin-stdlib-jdk8-1.8.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0) with IdentityTransform
+Transforming kotlin-stdlib-jdk7-1.8.0.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0) with IdentityTransform
+Transforming kotlin-stdlib-1.9.24.jar (org.jetbrains.kotlin:kotlin-stdlib:1.9.24) with IdentityTransform
+Transforming annotations-13.0.jar (org.jetbrains:annotations:13.0) with IdentityTransform
+Transforming listenablefuture-1.0.jar (com.google.guava:listenablefuture:1.0) with IdentityTransform
+Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/411221435fc598ea6c45743869d650e3/transformed/activity-1.7.0 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/3d9efbf281507841f2c86d9fd1c4139f/transformed/fragment-1.5.4 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/1e4f6426e152c763ff866d1516128b91/transformed/drawerlayout-1.0.0 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/dc9369d3a3308050fc6782cf03ea6014/transformed/emoji2-views-helper-1.3.0 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/192474c036ec43764acdf6f3e34ae042/transformed/emoji2-1.3.0 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/36b3856ba9c7cbbdc36c1fd5fe2a4d44/transformed/appcompat-1.7.0 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/66e87927202b5219b442b09f9c258f07/transformed/vectordrawable-animated-1.1.0 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/54f7211a0261829208bd57042dfaa330/transformed/vectordrawable-1.1.0 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/8cf63126afecb5baa428a1cf8e5c8ba0/transformed/viewpager-1.0.0 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/f3fda6a219a531beb4042fe3d2b5996e/transformed/customview-1.0.0 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/e2846cd86094a5772d00090bc5999692/transformed/loader-1.0.0 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/8e0a0bff2d388b6446750efdf4a5758f/transformed/core-1.13.1 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/4bd627a9048f6ce18b1b2d88bd05a714/transformed/savedstate-1.2.1 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/a1eb4c955a5536edee1a0604e5a8d871/transformed/lifecycle-livedata-2.6.2 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/475157b7fb9afaa8cbd268d644c85bc1/transformed/lifecycle-viewmodel-2.6.2 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/44d9374c2fc79a1ce870385ec114cea5/transformed/lifecycle-process-2.6.2 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/2123c70e0b087a565ece9761afcdf5e2/transformed/lifecycle-livedata-core-2.6.2 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/075303c1a579c423313bb64f570c90a9/transformed/lifecycle-viewmodel-savedstate-2.6.2 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/f0d9cfbdb784c10d6a0f1a5315cd19fe/transformed/lifecycle-runtime-2.6.2 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/ee0481a11330c26fe06a00831ef0481b/transformed/core-ktx-1.13.1 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/b602daaf2448be52ca00da64464dbe99/transformed/annotation-experimental-1.4.0 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/4e16cc280eaa0a1f5277c41379c36ea2/transformed/profileinstaller-1.3.1 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/c829f663b97a5e70a3d902a476572ec8/transformed/cursoradapter-1.0.0 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/0f311b49bca424a420b7c2ea65cfd17b/transformed/interpolator-1.0.0 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/e76f1b767bbdaf61093fe6fdbd88b122/transformed/versionedparcelable-1.1.1 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/705c330e03d4e2fcb62a924d14782115/transformed/startup-runtime-1.1.1 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/3cd12336f22dc1b12fb756d64dc91d51/transformed/tracing-1.0.0 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for AarTransform: /home/runner/.gradle/caches/transforms-4/35b3db2516afa50d8f7eeea7a2525269/transformed/core-runtime-2.2.0 because:
+  Build cache is disabled
+  Caching not enabled.
+Caching disabled for task ':app:mergeDebugJavaResource' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:mergeDebugJavaResource' is not up-to-date because:
+  No history is available.
+The input changes require a full rebuild for incremental task ':app:mergeDebugJavaResource'.
+Resolve mutations for :app:packageDebug (Thread[Execution worker Thread 2,5,main]) started.
+:app:packageDebug (Thread[Execution worker Thread 2,5,main]) started.
+
+> Task :app:packageDebug
+Custom actions are attached to task ':app:packageDebug'.
+Caching disabled for task ':app:packageDebug' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:packageDebug' is not up-to-date because:
+  No history is available.
+The input changes require a full rebuild for incremental task ':app:packageDebug'.
+Resolve mutations for :app:createDebugApkListingFileRedirect (Thread[Execution worker Thread 2,5,main]) started.
+:app:createDebugApkListingFileRedirect (Thread[Execution worker Thread 2,5,main]) started.
+
+> Task :app:createDebugApkListingFileRedirect
+Caching disabled for task ':app:createDebugApkListingFileRedirect' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:createDebugApkListingFileRedirect' is not up-to-date because:
+  No history is available.
+Resolve mutations for :app:assembleDebug (Thread[Execution worker Thread 2,5,main]) started.
+:app:assembleDebug (Thread[Execution worker Thread 2,5,main]) started.
+
+> Task :app:assembleDebug
+Skipping task ':app:assembleDebug' as it has no actions.
 AAPT2 aapt2-8.5.2-11315950-linux Daemon #0: shutdown
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/build-1782037406989.json
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/build-1782037513216.json
 
-FAILURE: Build failed with an exception.
-
-* What went wrong:
-Execution failed for task ':app:compileDebugKotlin'.
-> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
-   > Compilation error. See log for more details
-
-* Try:
-> Run with --debug option to get more log output.
-> Run with --scan to get full insights.
-> Get more help at https://help.gradle.org.
-
-* Exception is:
-org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:compileDebugKotlin'.
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.lambda$executeIfValid$1(ExecuteActionsTaskExecuter.java:130)
-	at org.gradle.internal.Try$Failure.ifSuccessfulOrElse(Try.java:282)
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:128)
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:116)
-	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
-	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
-	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
-	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
-	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:200)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:195)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
-	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
-	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:80)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
-	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:463)
-	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:380)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
-	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
-Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionException: A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
-	at org.gradle.workers.internal.DefaultWorkerExecutor$WorkItemExecution.waitForCompletion(DefaultWorkerExecutor.java:287)
-	at org.gradle.internal.work.DefaultAsyncWorkTracker.lambda$waitForItemsAndGatherFailures$2(DefaultAsyncWorkTracker.java:130)
-	at org.gradle.internal.Factories$1.create(Factories.java:31)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLocks(DefaultWorkerLeaseService.java:336)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLocks(DefaultWorkerLeaseService.java:319)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withoutLock(DefaultWorkerLeaseService.java:324)
-	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForItemsAndGatherFailures(DefaultAsyncWorkTracker.java:126)
-	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForItemsAndGatherFailures(DefaultAsyncWorkTracker.java:92)
-	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForAll(DefaultAsyncWorkTracker.java:78)
-	at org.gradle.internal.work.DefaultAsyncWorkTracker.waitForCompletion(DefaultAsyncWorkTracker.java:66)
-	at org.gradle.api.internal.tasks.execution.TaskExecution$3.run(TaskExecution.java:252)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
-	at org.gradle.internal.operations.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:68)
-	at org.gradle.api.internal.tasks.execution.TaskExecution.executeAction(TaskExecution.java:229)
-	at org.gradle.api.internal.tasks.execution.TaskExecution.executeActions(TaskExecution.java:212)
-	at org.gradle.api.internal.tasks.execution.TaskExecution.executeWithPreviousOutputFiles(TaskExecution.java:195)
-	at org.gradle.api.internal.tasks.execution.TaskExecution.execute(TaskExecution.java:162)
-	at org.gradle.internal.execution.steps.ExecuteStep.executeInternal(ExecuteStep.java:105)
-	at org.gradle.internal.execution.steps.ExecuteStep.access$000(ExecuteStep.java:44)
-	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:59)
-	at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:56)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:200)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:195)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
-	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:56)
-	at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:44)
-	at org.gradle.internal.execution.steps.CancelExecutionStep.execute(CancelExecutionStep.java:41)
-	at org.gradle.internal.execution.steps.TimeoutStep.executeWithoutTimeout(TimeoutStep.java:74)
-	at org.gradle.internal.execution.steps.TimeoutStep.execute(TimeoutStep.java:55)
-	at org.gradle.internal.execution.steps.PreCreateOutputParentsStep.execute(PreCreateOutputParentsStep.java:50)
-	at org.gradle.internal.execution.steps.PreCreateOutputParentsStep.execute(PreCreateOutputParentsStep.java:28)
-	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:67)
-	at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:37)
-	at org.gradle.internal.execution.steps.BroadcastChangingOutputsStep.execute(BroadcastChangingOutputsStep.java:61)
-	at org.gradle.internal.execution.steps.BroadcastChangingOutputsStep.execute(BroadcastChangingOutputsStep.java:26)
-	at org.gradle.internal.execution.steps.CaptureOutputsAfterExecutionStep.execute(CaptureOutputsAfterExecutionStep.java:67)
-	at org.gradle.internal.execution.steps.CaptureOutputsAfterExecutionStep.execute(CaptureOutputsAfterExecutionStep.java:45)
-	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:40)
-	at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:29)
-	at org.gradle.internal.execution.steps.BuildCacheStep.executeWithoutCache(BuildCacheStep.java:189)
-	at org.gradle.internal.execution.steps.BuildCacheStep.lambda$execute$1(BuildCacheStep.java:75)
-	at org.gradle.internal.Either$Right.fold(Either.java:175)
-	at org.gradle.internal.execution.caching.CachingState.fold(CachingState.java:62)
-	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:73)
-	at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:48)
-	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:46)
-	at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:35)
-	at org.gradle.internal.execution.steps.SkipUpToDateStep.executeBecause(SkipUpToDateStep.java:76)
-	at org.gradle.internal.execution.steps.SkipUpToDateStep.lambda$execute$2(SkipUpToDateStep.java:54)
-	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:54)
-	at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:36)
-	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:37)
-	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:27)
-	at org.gradle.internal.execution.steps.ResolveIncrementalCachingStateStep.executeDelegate(ResolveIncrementalCachingStateStep.java:49)
-	at org.gradle.internal.execution.steps.ResolveIncrementalCachingStateStep.executeDelegate(ResolveIncrementalCachingStateStep.java:27)
-	at org.gradle.internal.execution.steps.AbstractResolveCachingStateStep.execute(AbstractResolveCachingStateStep.java:71)
-	at org.gradle.internal.execution.steps.AbstractResolveCachingStateStep.execute(AbstractResolveCachingStateStep.java:39)
-	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:65)
-	at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:36)
-	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:106)
-	at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:55)
-	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:64)
-	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:43)
-	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.executeWithNonEmptySources(AbstractSkipEmptyWorkStep.java:125)
-	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:61)
-	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:36)
-	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsStartedStep.execute(MarkSnapshottingInputsStartedStep.java:38)
-	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:36)
-	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:23)
-	at org.gradle.internal.execution.steps.HandleStaleOutputsStep.execute(HandleStaleOutputsStep.java:75)
-	at org.gradle.internal.execution.steps.HandleStaleOutputsStep.execute(HandleStaleOutputsStep.java:41)
-	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.lambda$execute$0(AssignMutableWorkspaceStep.java:35)
-	at org.gradle.api.internal.tasks.execution.TaskExecution$4.withWorkspace(TaskExecution.java:289)
-	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:31)
-	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:22)
-	at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:40)
-	at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:23)
-	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.lambda$execute$2(ExecuteWorkBuildOperationFiringStep.java:67)
-	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:67)
-	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:39)
-	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:46)
-	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:34)
-	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:48)
-	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:35)
-	at org.gradle.internal.execution.impl.DefaultExecutionEngine$1.execute(DefaultExecutionEngine.java:61)
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:127)
-	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:116)
-	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
-	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
-	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
-	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
-	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:200)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:195)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
-	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
-	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
-	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:80)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
-	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:463)
-	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:380)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
-	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:47)
-Caused by: org.jetbrains.kotlin.gradle.tasks.CompilationErrorException: Compilation error. See log for more details
-	at org.jetbrains.kotlin.gradle.tasks.TasksUtilsKt.throwExceptionIfCompilationFailed(tasksUtils.kt:20)
-	at org.jetbrains.kotlin.compilerRunner.GradleKotlinCompilerWork.run(GradleKotlinCompilerWork.kt:141)
-	at org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction.execute(GradleCompilerRunnerWithWorkers.kt:73)
-	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:63)
-	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:66)
-	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:62)
-	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:100)
-	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:62)
-	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
-	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:200)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:195)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:157)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.internal.operations.DefaultBuildOperationExecutor.call(DefaultBuildOperationExecutor.java:73)
-	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
-	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:59)
-	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$0(DefaultWorkerExecutor.java:174)
-	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:187)
-	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$700(DefaultConditionalExecutionQueue.java:120)
-	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:162)
-	at org.gradle.internal.Factories$1.create(Factories.java:31)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:264)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:128)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:133)
-	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:157)
-	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:126)
-	... 2 more
-
-
-BUILD FAILED in 23s
-28 actionable tasks: 28 executed
+BUILD SUCCESSFUL in 25s
+35 actionable tasks: 35 executed
