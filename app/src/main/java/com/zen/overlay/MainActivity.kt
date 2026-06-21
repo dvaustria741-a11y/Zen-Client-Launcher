@@ -1,9 +1,13 @@
 package com.zen.overlay
 
+import android.app.Dialog
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.provider.Settings
+import android.view.Window
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -14,12 +18,15 @@ private const val MINECRAFT_PACKAGE = "com.mojang.minecraftpe"
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var tvStatus: TextView
+    private var pendingLaunch = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val tvGreeting = findViewById<TextView>(R.id.tvGreeting)
-        val tvStatus = findViewById<TextView>(R.id.tvStatus)
+        tvStatus = findViewById(R.id.tvStatus)
         val tvVersionInfo = findViewById<TextView>(R.id.tvVersionInfo)
         val btnLaunch = findViewById<Button>(R.id.btnLaunch)
         val btnSettings = findViewById<Button>(R.id.btnSettings)
@@ -32,20 +39,9 @@ class MainActivity : AppCompatActivity() {
 
         btnLaunch.setOnClickListener {
             when {
-                !Settings.canDrawOverlays(this) -> {
-                    tvStatus.text = "Grant overlay permission first"
-                    startActivity(Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
-                        Uri.parse("package:$packageName")))
-                }
+                !Settings.canDrawOverlays(this) -> showOverlayPermissionDialog()
                 !mcInstalled -> Toast.makeText(this, "Minecraft Bedrock not installed", Toast.LENGTH_SHORT).show()
-                else -> {
-                    tvStatus.text = "Launching..."
-                    startForegroundService(Intent(this, OverlayService::class.java))
-                    packageManager.getLaunchIntentForPackage(MINECRAFT_PACKAGE)?.let {
-                        it.addCategory(Intent.CATEGORY_LAUNCHER)
-                        startActivity(it)
-                    }
-                }
+                else -> launchMinecraft()
             }
         }
 
@@ -57,8 +53,40 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         val hasOverlay = Settings.canDrawOverlays(this)
-        findViewById<TextView>(R.id.tvStatus).text =
-            if (hasOverlay) "Ready to launch" else "Overlay permission needed"
+        if (pendingLaunch && hasOverlay) {
+            pendingLaunch = false
+            tvStatus.text = "Permission granted!"
+            launchMinecraft()
+            return
+        }
+        tvStatus.text = if (hasOverlay) "Ready to launch" else "Overlay permission needed"
+    }
+
+    private fun showOverlayPermissionDialog() {
+        val dialog = Dialog(this)
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setContentView(R.layout.dialog_overlay_permission)
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+
+        dialog.findViewById<Button>(R.id.btnGrantPermission).setOnClickListener {
+            pendingLaunch = true
+            dialog.dismiss()
+            startActivity(Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+                Uri.parse("package:$packageName")))
+        }
+        dialog.findViewById<Button>(R.id.btnNotNow).setOnClickListener {
+            dialog.dismiss()
+        }
+        dialog.show()
+    }
+
+    private fun launchMinecraft() {
+        tvStatus.text = "Launching..."
+        startForegroundService(Intent(this, OverlayService::class.java))
+        packageManager.getLaunchIntentForPackage(MINECRAFT_PACKAGE)?.let {
+            it.addCategory(Intent.CATEGORY_LAUNCHER)
+            startActivity(it)
+        }
     }
 
     private fun timeGreeting(): String {
