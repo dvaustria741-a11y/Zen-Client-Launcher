@@ -1,0 +1,99 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.zenclient.launcher'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.zenclient.launcher"
+        minSdk 26          // Android 8.0 — minimum for NativeActivity + modern JNI patterns
+        targetSdk 34
+        versionCode 1
+        versionName "1.0.0"
+
+        ndk {
+            // Ship only arm64 — this is the only ABI Bedrock uses on modern Android devices.
+            // x86/x86_64 are emulator-only and Bedrock doesn't support them on real hardware.
+            abiFilters 'arm64-v8a'
+        }
+
+        externalNativeBuild {
+            cmake {
+                // Pass ABI explicitly so CMake toolchain can set the right sysroot
+                arguments "-DANDROID_ABI=arm64-v8a",
+                          "-DANDROID_PLATFORM=android-26",
+                          "-DANDROID_STL=c++_shared",
+                          // Tell our CMake we want to export a hook library, not an executable
+                          "-DZEN_BUILD_HOOK_LIB=ON"
+                cppFlags "-std=c++17 -fvisibility=hidden -O2"
+            }
+        }
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "src/main/cpp/CMakeLists.txt"
+            version "3.22.1"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug   // replace with your release keystore
+        }
+        debug {
+            debuggable true
+            jniDebuggable true   // enables lldb attach to the native process
+        }
+    }
+
+    packaging {
+        jniLibs {
+            // ---------------------------------------------------------------
+            // CRITICAL: Explicitly exclude every Mojang / FMOD .so pattern.
+            // These should never end up in our APK, but this acts as a hard
+            // build-time safety net in case any dependency or local module
+            // accidentally pulls them in.
+            // ---------------------------------------------------------------
+            excludes += [
+                '**/libminecraftpe.so',
+                '**/libfmod.so',
+                '**/libfmodL.so',
+                '**/libminecraft*.so',
+                '**/libmcpelauncher*.so',
+            ]
+            // Keep only our own hook library
+            keepDebugSymbols += ['**/libzenclient.so']
+        }
+        resources {
+            excludes += ['META-INF/LICENSE', 'META-INF/NOTICE']
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.13.1'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.8.3'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1'
+}

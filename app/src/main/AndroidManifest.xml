@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ===================================================================
+         PERMISSIONS
+         We request the minimum viable set — no SYSTEM_ALERT_WINDOW,
+         no accessibility service, no device admin.
+         =================================================================== -->
+
+    <!-- Required to check license / login status if we add Microsoft auth later -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Read/write to app-scoped storage for logs and mod configs.
+         On API 29+ we use app-specific dirs so WRITE_EXTERNAL_STORAGE
+         is not needed; keep READ for backward compat to minSdk 26. -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+    <!-- GameActivity / NativeActivity requires this so the process can
+         maintain a continuous rendering loop without the screen dimming. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- ===================================================================
+         PACKAGE VISIBILITY  (Android 11 / API 30+)
+         Without this <queries> block, PackageManager.getPackageInfo() for
+         com.mojang.minecraftpe returns null on API 30+ even if the app is
+         installed, because of the new package visibility restrictions.
+         This does NOT grant any special access — it only lets us *see*
+         that the package exists so we can read its nativeLibraryDir.
+         =================================================================== -->
+    <queries>
+        <package android:name="com.mojang.minecraftpe" />
+    </queries>
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ZenClientLauncher"
+        android:hardwareAccelerated="true"
+        tools:targetApi="34">
+
+        <!-- ---------------------------------------------------------------
+             MainActivity — the entry point.
+             Handles the PackageManager lookup, library loading, and error
+             display.  Does NOT inherit from NativeActivity itself.
+             --------------------------------------------------------------- -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|screenSize|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- ---------------------------------------------------------------
+             ZenNativeActivity — the rendering host.
+             android:hasCode="false" tells the framework this activity's
+             onCreate is handled entirely in native code (our libzenclient.so),
+             which is the standard NativeActivity pattern.
+             We set android.app.lib_name so NativeActivity knows which .so
+             to load when it's started without an explicit System.loadLibrary
+             call from Java (belt-and-suspenders alongside our explicit load).
+             --------------------------------------------------------------- -->
+        <activity
+            android:name=".ZenNativeActivity"
+            android:exported="false"
+            android:hasCode="false"
+            android:screenOrientation="landscape"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/app_name">
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="zenclient" />
+        </activity>
+
+    </application>
+
+</manifest>
