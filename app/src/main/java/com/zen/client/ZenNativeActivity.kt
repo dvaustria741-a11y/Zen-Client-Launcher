@@ -37,6 +37,17 @@ class ZenNativeActivity : NativeActivity() {
     companion object {
         private const val TAG = "ZenNativeActivity"
 
+        // NativeActivity maps libzenclient.so via its own internal dlopen()
+        // (for android.app.lib_name / ANativeActivity_onCreate), which does
+        // NOT register the library with the JNI native-method resolver.
+        // Without this explicit load, external fun below throws
+        // UnsatisfiedLinkError even though the .so is already in memory and
+        // the symbol names are correct. Safe to call even though the lib is
+        // already mapped — System.loadLibrary just registers it for lookup.
+        init {
+            System.loadLibrary("zenclient")
+        }
+
         // JNI bridge — implemented in src/main/cpp/zen_jni_bridge.cpp
         @JvmStatic
         external fun nativeSetBedrockLibDir(libDir: String)
