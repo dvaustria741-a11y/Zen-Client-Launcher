@@ -64,7 +64,13 @@ android {
                 "**/libminecraftpe.so",
                 "**/libfmod.so",
                 "**/libfmodL.so",
-                "**/libminecraft*.so"
+                "**/libminecraft*.so",
+                // We pull in org.conscrypt:conscrypt-android below purely for its
+                // Java-side classes (org.conscrypt.CryptoUpcalls etc.) — Mojang's
+                // own libconscrypt_jni.so is what we explicitly System.load() from
+                // Bedrock's native lib dir in loadBedrockNativeLibs(), so we don't
+                // want this artifact's bundled .so shadowing/conflicting with it.
+                "**/libconscrypt_jni.so"
             )
         }
     }
@@ -84,4 +90,15 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.12.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
+
+    // Bedrock's bundled libconscrypt_jni.so (loaded explicitly in
+    // ZenNativeActivity.loadBedrockNativeLibs) does a JNI FindClass +
+    // NewGlobalRef on org.conscrypt.CryptoUpcalls during load. That class only
+    // ships inside Minecraft's own APK dex, not ours, so the lookup throws
+    // ClassNotFoundException — and since the native code doesn't check for a
+    // pending exception before NewGlobalRef, it hard-aborts (SIGABRT) under
+    // strict JNI checking. Pulling in the standalone Conscrypt artifact gives
+    // our own APK the matching Java-side classes so the lookup succeeds.
+    // (Its bundled native .so is excluded above — we keep using Mojang's own.)
+    implementation("org.conscrypt:conscrypt-android:2.5.2")
 }
